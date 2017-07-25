@@ -10,7 +10,7 @@ Impala raises the bar for SQL query performance on Apache Hadoop while retaining
   2. Download [httpclient-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient) and [httpcore-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore)
 
 * Install Hive JDBC
-  1. Put the downloaded jar package into `$KAP_HOME/ext`, so that KAP can be loaded at startup JDBC Driver
+  Put the downloaded jar package into `$KAP_HOME/ext`, so that KAP can be loaded at startup JDBC Driver
 
 
 * Modify `$KAP_HOME/conf/kylin.properties`, add Hive JDBC configuration
