@@ -10,7 +10,7 @@
   2. 下载[httpclient-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient)和[httpcore-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore)。
 
 * 安装 JDBC
-  1. 把下载好的 jar 包放到 `$KAP_HOME/ext` 下面，以便让 KAP 在启动时可以加载 JDBC Driver 。
+  把下载好的 jar 包放到 `$KAP_HOME/ext` 下面，以便让 KAP 在启动时可以加载 JDBC Driver 。
 
 * 修改 `$KAP_HOME/conf/kylin.properties` ，添加以下配置：
 
@@ -41,13 +41,13 @@
                    </property>
              ```
         + 在初始化 hive-jdbc connection 前，kap需要具有有效的kerberos ticket，**请确保 klist 中存在有效的 principal** 能够访问 Impala 集群。
-  3. 验证 thriftserver
+  3. 验证 Thrift server
      1. 启动 beeline ```${SPARK_HOME} or ${HIVE_HOME}/bin/beeline```
      2. 使用 beeline 连接 Spark Thrift ```!connect  ${kylin.query.pushdown.jdbc.url}```
      3. 使用简单sql测试可用
   4. 验证 Query Pushdown
      1. 启动 kap ，在 insight 界面进行一些简单查询。
-     2. 在 Impala web 页面中能够找到刚才的查询，表示 kap 能够正常连接 Impala。
+     2. 在 Impala web 页面中能够找到刚才的查询，表示 KAP 能够正常连接 Impala。
 
       ![](query_pushdown_images/query_pushdown_impala.png)
 
