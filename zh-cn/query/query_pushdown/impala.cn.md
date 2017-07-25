@@ -40,13 +40,13 @@
                        <value>kerberos</value>
                    </property>
              ```
-        + 在初始化 hive-jdbc connection 前，kap需要具有有效的kerberos ticket，**请确保 klist 中存在有效的 principal** 能够访问 Impala 集群。
+        + 在初始化 hive-jdbc connection 前，KAP 需要具有有效的kerberos ticket，**请确保 klist 中存在有效的 principal** 能够访问 Impala 集群。
   3. 验证 Thrift server
      1. 启动 beeline ```${SPARK_HOME} or ${HIVE_HOME}/bin/beeline```
      2. 使用 beeline 连接 Spark Thrift ```!connect  ${kylin.query.pushdown.jdbc.url}```
-     3. 使用简单sql测试可用
+     3. 使用简单SQL测试可用
   4. 验证 Query Pushdown
-     1. 启动 KAP ，在 insight 界面进行一些简单查询。
+     1. 启动 KAP ，在 Insight 界面进行一些简单查询。
      2. 在 Impala web 页面中能够找到刚才的查询，表示 KAP 能够正常连接 Impala。
 
       ![](query_pushdown_images/query_pushdown_impala.png)
