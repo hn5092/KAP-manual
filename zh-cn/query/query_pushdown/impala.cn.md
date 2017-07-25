@@ -6,7 +6,7 @@
 * Impala 使用 Hive JDBC接口，支持 JDBC 接口的应用可以通过 Hive JDBC 访问 Impala 进行数据查询。
 
 * Download Hive JDBC Driver
-  1. 根据自己 hadoop 集群 hive 的版本下载对应版本的[hive-jdbc-version.jar](hive-jdbc.jarhttps://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)，请确保使用的 jdbc 版本不要高于集群的hive版本。
+  1. 根据自己 Hadoop 集群 Hive 的版本下载对应版本的[hive-jdbc-version.jar](hive-jdbc.jarhttps://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)，请确保使用的 JDBC 版本不要高于集群的Hive版本。
   2. 下载[httpclient-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient)和[httpcore-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore)。
 
 * 安装 JDBC
@@ -33,7 +33,7 @@
            ```kylin.query.pushdown.jdbc.url=jdbc:hive2://impala_host:impala_hs2_port/default;principal=Impala-Kerberos-Principal```
 
 
-        + 请确保 kap 能都读取到的 hive-site.xml 中打开了 hive-server2 的 kerberos 认证:
+        + 请确保 KAP 能都读取到的 hive-site.xml 中打开了 hive-server2 的 kerberos 认证:
             ```
                    <property>
                        <name>hive.server2.authentication</name>
@@ -46,7 +46,7 @@
      2. 使用 beeline 连接 Spark Thrift ```!connect  ${kylin.query.pushdown.jdbc.url}```
      3. 使用简单sql测试可用
   4. 验证 Query Pushdown
-     1. 启动 kap ，在 insight 界面进行一些简单查询。
+     1. 启动 KAP ，在 insight 界面进行一些简单查询。
      2. 在 Impala web 页面中能够找到刚才的查询，表示 KAP 能够正常连接 Impala。
 
       ![](query_pushdown_images/query_pushdown_impala.png)
