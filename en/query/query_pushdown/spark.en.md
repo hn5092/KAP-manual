@@ -1,4 +1,4 @@
-## Spark engine integration
+## Spark Engine Integration
 
 Spark is a fast and general engine for big data processing, with built-in modules for streaming, SQL, machine learning and graph processing.
 
@@ -10,20 +10,20 @@ Spark is a fast and general engine for big data processing, with built-in module
   2. Download [httpclient-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient) and [httpcore-version.jar](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore) .
 
 * Install Hive JDBC
-  1. Put the downloaded jar package into `$KAP_HOME/ext`, so that KAP can be loaded at startup JDBC Driver .
+  Put the downloaded jar package into `$KAP_HOME/ext`, so that KAP can be loaded at startup JDBC Driver .
 
 
 * Modify `$KAP_HOME/conf/kylin.properties`, add Hive JDBC configuration.
 
 
-  1. Configure Hive JDBC driver and Pushdown Runner:
+  Step 1. Configure Hive JDBC driver and Pushdown Runner:
 
      1. ```kylin.query.pushdown.runner-class-name=org.apache.kylin.query.adhoc.PushDownRunnerJdbcImpl```
 
      2. ```kylin.query.pushdown.jdbc.driver=org.apache.hive.jdbc.HiveDriver```
 
 
-  2. Configure JDBC Url
+  Step 2. Configure JDBC Url
 
      1. Access Spark Thrift without kerberos security certification.
 
@@ -45,13 +45,13 @@ Spark is a fast and general engine for big data processing, with built-in module
              ```
         + The **KAP must have a valid Kerberos ticket before you initiate a connection to HiveServer2** (use kinit) .
 
-  3. Verification thrift
+  Step 3. Verify Thrift
      1. start `${SPARK_HOME} or ${HIVE_HOME}/bin/beeline` .
      2. enter ```!connect ${kylin.query.pushdown.jdbc.url}``` .
      3. test some sql ensure its ok
-  4. Verification test
+  Step 4. Verification Test
      1. Start KAP to query loaded tables in the insight page
-     2. If queries working track can be found in the Spark web page, it means KAP has been integrated with Impala normally
+     2. If queries working track can be found in the Spark web page, it means KAP has been integrated with Spark normally
 
       ![](query_pushdown_images/query_pushdown_spark.png)
 
