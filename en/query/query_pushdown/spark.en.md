@@ -49,7 +49,7 @@ Spark is a fast and general engine for big data processing, with built-in module
      1. start `${SPARK_HOME} or ${HIVE_HOME}/bin/beeline` .
      2. enter ```!connect ${kylin.query.pushdown.jdbc.url}``` .
      3. test some sql ensure its ok
-  Step 4. Verification Test
+  Step 4. Verify Query Pushdown
      1. Start KAP to query loaded tables in the insight page
      2. If queries working track can be found in the Spark web page, it means KAP has been integrated with Spark normally
 
