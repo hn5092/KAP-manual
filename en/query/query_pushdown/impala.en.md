@@ -50,7 +50,7 @@ Impala raises the bar for SQL query performance on Apache Hadoop while retaining
      2. Enter ``!connect ${kylin.query.pushdown.jdbc.url}``
      3. Test some SQL queries and ensure they work correctly
      
-  Step 4. Verify query pushdown
+  Step 4. Verify Query Pushdown
      1. Start KAP to query loaded tables in the insight page
      2. If queries working track can be found in the Impala web page, it means KAP has been integrated with Impala normally
          ![](query_pushdown_images/query_pushdown_impala.png)
