@@ -1,5 +1,5 @@
 {
-	"title" : "KAP 手册",
+	"title" : "KAP Manual",
 	"description" : "Kyligence智能大数据分析平台(Kyligence Analytics Platform, KAP)是基于Apache Kylin的，在超大规模数据集上提供亚秒级分析能力的企业级产品，为业务用户、分析师及工程师提供简单、快捷的大数据分析服务。",
 	"links" : {
 		"sidebar" : {
