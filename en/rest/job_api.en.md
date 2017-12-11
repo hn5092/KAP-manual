@@ -8,6 +8,8 @@
 
 * [Resume Job](#resume-job)
 * [Discard Job](#discard-job)
+* [Pause Job](#pause-job)
+* [Drop Job](#drop-job)
 * [Get Job Status](#get-job-status)
 * [Get Job Step Output](#get-job-step-output)
 * [Get Job List](#get-job-list)
@@ -95,6 +97,38 @@
 * jobId - `required` `string` Job id.
 
 #### Response Example
+(same as "Resume Job")
+
+### Pause Job
+
+`Request Mode PUT`
+
+`Access Path http://host:port/kylin/api/jobs/{jobId}/pause`
+
+`Content-Type: application/vnd.apache.kylin-v2+json`
+
+#### Path Variable
+
+- jobId - `required` `string` Job id.
+
+#### Response Example
+
+(same as "Resume Job")
+
+### Drop Job
+
+`Request Mode DELETE`
+
+`Access Path http://host:port/kylin/api/jobs/{jobId}/drop`
+
+`Content-Type: application/vnd.apache.kylin-v2+json`
+
+#### Path Variable
+
+- jobId - `required` `string` Job id.
+
+#### Response Example
+
 (same as "Resume Job")
 
 ### Get Job Status
