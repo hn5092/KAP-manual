@@ -7,7 +7,7 @@
 
 
 * [恢复 Job](#恢复job)
-* [取消 Job](#取消job)
+* [终止 Job](#终止job)
 * [暂停 Job](#暂停job)
 * [删除 Job](#删除job)
 * [返回 Job 信息](#返回job信息)
@@ -86,7 +86,7 @@
 }
 ```
 
-### 取消Job
+### 终止Job
 `请求方式 PUT`
 
 `访问路径 http://host:port/kylin/api/jobs/{jobId}/cancel`
