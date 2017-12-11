@@ -1,6 +1,6 @@
 ## Multi-node Deployment
 
-This section will introduce how to deploy KyAnalyzer to multiply Linux servers (indicated by node1, node2,…, in this article) and how to configure mysql which multiple nodes may access.
+This section introduces how to deploy KyAnalyzer to multiple Linux servers (indicated by node1, node2,…, in this article) and how to configure mysql which multiple nodes may access.
 
 Firstly, modify the configuration file *conf/kyanalyzer.properties* for each KyAnalyzer node and respectively set "kap.host" and "kap.port" to the IP address and port of the same KAP server (or configure to multiple Query Servers in one KAP cluster).
 
