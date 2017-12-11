@@ -7,7 +7,9 @@
 
 
 * [恢复 Job](#恢复job)
-* [抛弃 Job](#抛弃job)
+* [取消 Job](#取消job)
+* [暂停 Job](#暂停job)
+* [删除 Job](#删除job)
 * [返回 Job 信息](#返回job信息)
 * [返回 Job 每步输出](#返回job每步输出)
 * [返回 Job 列表](#返回job列表)
@@ -84,7 +86,7 @@
 }
 ```
 
-### 抛弃Job
+### 取消Job
 `请求方式 PUT`
 
 `访问路径 http://host:port/kylin/api/jobs/{jobId}/cancel`
@@ -95,6 +97,38 @@
 * jobId - `必选` `string` Job id.
 
 #### 响应示例
+(同 "恢复 job")
+
+### 暂停Job
+
+`请求方式 PUT`
+
+`访问路径 http://host:port/kylin/api/jobs/{jobId}/pause`
+
+`Content-Type: application/vnd.apache.kylin-v2+json`
+
+#### 路径变量
+
+- jobId - `必选` `string` Job id.
+
+#### 响应示例
+
+(同 "恢复 job")
+
+### 删除Job
+
+`请求方式 DELETE`
+
+`访问路径 http://host:port/kylin/api/jobs/{jobId}/drop`
+
+`Content-Type: application/vnd.apache.kylin-v2+json`
+
+#### 路径变量
+
+- jobId - `必选` `string` Job id.
+
+#### 响应示例
+
 (同 "恢复 job")
 
 ### 返回Job信息
