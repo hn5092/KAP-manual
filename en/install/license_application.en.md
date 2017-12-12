@@ -21,5 +21,19 @@ To apply for KAP license and KAP Plus license, do the following:
 
    And then click **Generate License Request File**. You will get the request file.
 
-   ![Request License File](images/license_4.en.png)
+![Request License File](images/license_4.en.png)
+
+### Load License File
+
+After receiving the LICENSE file (Evaluation License or Official License) and installing KAP or KAP Plus, you need to load the LICENSE file to make KAP or KAP Plus effective. To load the file, do the following:
+
+In KAP login page, click **Help -> Upload License**, you will see **Upload License** Window. Click **Browse** and locate the place which you save the LICENSE file. And then click **Open -> Submit** to upload it to KAP. 
+
+![Upload License File](images/license_5.en.png)
+
+In addition, you may also copy it to KAP's install directory to make KAP effective. We assume you downloaded the LICENSE file to Downloads folder and installed KAP under the directory of ${KYLIN_HOME}:
+
+```
+scp Downloads/LICENSE root@sandbox:/${KYLIN_HOME}
+```
 

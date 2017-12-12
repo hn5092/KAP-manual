@@ -21,3 +21,17 @@
 然后点击**生成许可申请文件**，获取该文件。
 
 ![许可证申请文件](images/license_4.cn.png)
+
+### 加载许可证
+在收到许可证文件（试用许可证或正式许可证）并安装完 KAP 或 KAP Plus 之后，需要加载该文件，才能使用 KAP 或 KAP Plus。具体操作步骤如下：
+
+在 KAP 登录页面点击**帮助 -> 更新许可证**，将显示**更新许可证**窗口（见下），点击 **Browse** 找到保存 LICENSE 文件的位置，依次点击**打开 -> 提交** ，即可将它上传到 KAP。
+
+![上传许可证文件](images/license_5.cn.png)
+
+除此之外，也可将 LICENSE 文件拷贝到 KAP 的安装目录下。假设您将许可证文件下载到 Downloads 文件夹下，KAP 安装在 ${KYLIN_HOME} 目录：
+
+```
+scp Downloads/LICENSE root@sandbox:/${KYLIN_HOME}
+```
+
