@@ -127,7 +127,6 @@
       * [Row-level Access Control](security/row.en.md)
       * [Column-level Access Control](security/column.en.md)
 * [Trouble Shooting](troubleshooting/README.md)
-    * [Diagnosis](troubleshooting/diag.en.md)
     * [Logging](troubleshooting/logging.en.md)
     * [Alert](troubleshooting/alerting.en.md)
     * [Technical Support & Diagnosis](troubleshooting/diag.en.md)
