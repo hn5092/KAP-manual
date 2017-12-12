@@ -16,7 +16,7 @@ $KYLIN_HOME/bin/sample.sh
 
 ```shell
 Sample cube is created successfully in project 'learn_kylin'.
-Restart Kylin server or reload the metadata from web UI to see the change.
+Restart Kylin Server or click Web UI => System Tab => Reload Metadata to take effect
 ```
 
 ### 重新加载元数据

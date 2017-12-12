@@ -1,6 +1,11 @@
 ## Data Model
 
-Data model is created based on data source. In this article, we take the dataset coming with KAP as example. There are 1 fact table and 6 lookup tables in the data model, connected by foreign keys. In fact, not all columns on the tables are required for analysis, so we only put the required ones into data model. Then we set set these columns as dimensions or measures according to the analyst's scenarios.
+Data model is created based on data source. In this section, we take the dataset coming with KAP as example. There are 1 fact table and 6 lookup tables in the data model, connected by foreign keys. In fact, not all columns on the tables are required for analysis, so we only put the required ones into data model. Then we set set these columns as dimensions or measures according to the analyst's scenarios. This section mainly includes:
+
+- [Create Data Model](#create-data-model)
+- [Instructions and Tips](#instructions-and-tips)
+  - [Lookup Table Storage](#lookup-table-storage)
+  - [Select Dimensions and Measures](#select-dimensions-and-measures) 
 
 ### Create Data Model
 
@@ -14,7 +19,7 @@ Data model is created based on data source. In this article, we take the dataset
 
 1. To build the following snowflake schema, from the left source table list, drag source tables to the canvas of model designer (in the center of page). First, drag   `KYLIN_SALES` table to the canvas;
 2. Click the setting icon at the upper right corner to toggle `kylin_sales` 's table type to fact table;
-3. Select and drag the following lookup tables to the canvas (`KYLIN_CAL_DT`, `KYLIN_CATEGORY_GROUPINGS`,`KYLIN_ACCOUNT`, `KYLIN_COUNTRY`); Where, drag `KYLIN_ACCOUNT` twice and change their names to `SELLER_ACCOUNT` and `BUYER_ACCOUNT` respectively, and drag`KYLIN_COUNTRY` twice and change their names to `SELLER_ACCOUNT` and `BUYER_ACCOUNT` respectively。
+3. Select and drag the following lookup tables to the canvas (`KYLIN_CAL_DT`, `KYLIN_CATEGORY_GROUPINGS`,`KYLIN_ACCOUNT`, `KYLIN_COUNTRY`); Where, drag `KYLIN_ACCOUNT` twice and change their names to `SELLER_ACCOUNT` and `BUYER_ACCOUNT` respectively, and drag`KYLIN_COUNTRY` twice and change their names to `SELLER_COUNTRY` and `BUYER_COUNTRY` respectively。
 
 ![](images/model_design_update_en_2.png)
 

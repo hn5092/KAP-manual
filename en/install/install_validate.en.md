@@ -13,8 +13,10 @@ bin/sample.sh
 
 After the successful execution, the log would be:
 
-> Sample cube is created successfully in project 'learn_kylin'.
-> Restart Kylin server or reload the metadata from web UI to see the change.
+```
+Sample cube is created successfully in project 'learn_kylin'.
+Restart Kylin Server or click Web UI => System Tab => Reload Metadata to take effect
+```
 
 ### Reload Metadata
 

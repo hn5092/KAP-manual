@@ -1,5 +1,10 @@
 ## 设计模型
-在数据源就绪的基础之上，我们开始设计模型。以KAP自带的数据集为例，该数据集的数据模型包含一张事实表和四张维度表，表间通过外键进行关联。实际上，并不是表上所有的字段都有被分析的需要，因此我们可以有目的地仅选择所需字段添加到数据模型中。然后，根据分析师用户的具体分析场景，把这些字段设置为维度或度量。
+在数据源就绪的基础之上，我们开始设计模型。本文以KAP自带的数据集为例来介绍模型设计。该数据集的数据模型包含一张事实表和四张维度表，表间通过外键进行关联。实际上，并不是表上所有的字段都有被分析的需要，因此我们可以有目的地仅选择所需字段添加到数据模型中。然后，根据分析师用户的具体分析场景，把这些字段设置为维度或度量。本节主要内容包括：
+
+- [创建步骤](#创建步骤)
+- [详细操作及提示](#详细操作及提示)
+  - [关于维度表存储形式](#关于维度表存储形式)
+  - [选择维度及度量](#选择维度及度量)
 
 ### 创建步骤
 第一步，打开KAP的Web UI，在左上角项目列表中选择刚刚创建的*learn_kylin*项目，然后进入“模型”页面，并创建一个模型。
@@ -11,7 +16,7 @@
 
 1. 为建立下文所需的雪花模型，从左边的源表中，将希望用来建模的表拖至建模画布（页面中央），首先，将 `KYLIN_SALES` 表拖至画布；
 2. 单击 `KYLIN_SALES` 表右上角的设置图标，将该表的类型设为事实表；
-3. 选中并将以下维度表拖至画布 (`KYLIN_CAL_DT`, `KYLIN_CATEGORY_GROUPINGS`,`KYLIN_ACCOUNT`, `KYLIN_COUNTRY`)；其中`KYLIN_ACCOUNT` 拖出两次，将名称分别更改为`SELLER_ACCOUNT`和`BUYER_ACCOUNT`，`KYLIN_COUNTRY`也拖出两次，分别命名为`SELLER_ACCOUNT`和`BUYER_ACCOUNT`。
+3. 选中并将以下维度表拖至画布 (`KYLIN_CAL_DT`, `KYLIN_CATEGORY_GROUPINGS`,`KYLIN_ACCOUNT`, `KYLIN_COUNTRY`)；其中`KYLIN_ACCOUNT` 拖出两次，将名称分别更改为`SELLER_ACCOUNT`和`BUYER_ACCOUNT`，`KYLIN_COUNTRY`也拖出两次，分别命名为`SELLER_COUNTRY`和`BUYER_COUNTRY`。
 
 ![选择事实表和维度表](images/model_design_update_cn_2.png)
 
