@@ -2,6 +2,12 @@
 
 Start from V2.5, KAP provides a ***multi-preference based Cube Optimizer*** to suggest cube designs, which helps reduce cube expansion and improve ***Query/Build*** performance.
 
+In the second step of Cube creation, you may find this function.
+
+![](images/Cube_optimizer/updated_en_0.png)
+
+
+
 ### Introduction
 
 According to the best pratices of Cube tuning, Optimizer analyzes statistics of source data and SQL patterns, and suggests a optimized Cube design, which includes:
