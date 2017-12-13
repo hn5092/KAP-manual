@@ -240,13 +240,11 @@ kylin.security.ldap.service-group-search-base=ou=Groups,dc=example,dc=com
 
 ### Configure Administrator Groups and Default Roles
 
-KAP allows mapping an LDAP group to the administrator role: In kylin.properties, set "acl.adminRole" to "ROLE_" + GROUP_NAME (The GROUP_NAME need be in upper case). In this example, use the group "ADMIN" to manage all KAP administrators, then this property should be set to
+KAP allows mapping an LDAP group to the administrator role: In kylin.properties, set "acl.admin-role" to the  LDAP group name. In this example, use the group "admin" to manage all KAP administrators, then this property should be set to:
 
 ```
-kylin.security.acl.admin-role=ROLE_ADMIN
+kylin.security.acl.admin-role=admin
 ```
-
-The attribute "acl.defaultRole" defines the roles that granted to any logged-on user. By default be both Analyst and Modeler.
 
 ### Enable LDAP
 
