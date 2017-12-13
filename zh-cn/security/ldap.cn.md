@@ -231,6 +231,7 @@ kylin.security.ldap.service-group-search-base=ou=Groups,dc=example,dc=com
 ```properties
 kylin.security.acl.admin-role=admin
 ```
+在从 2.5.4 以下的版本升级至 2.5.4 及以上的版本时，LDAP 组名应改为小写。
 
 ### 启用 LDAP
 
