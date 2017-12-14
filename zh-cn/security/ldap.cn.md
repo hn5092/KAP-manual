@@ -232,7 +232,7 @@ kylin.security.acl.admin-role"设置为 LDAP 组名（组名大小写保留原�
 ```properties
 kylin.security.acl.admin-role=admin
 ```
-在从 2.5.4 以下的版本升级至 2.5.4 及以上的版本时，LDAP 组名原先为大写则保留大写，原先为小写则保留小写。
+在从 2.5.4 以下的版本升级至 2.5.4 及以上的版本时，应修改该配置中的 LDAP 组名,原先为大写则保留大写，原先为小写则保留小写，并拿掉 2.5.4 以下版本配置所需的 ROLE_。
 
 ### 启用 LDAP
 
