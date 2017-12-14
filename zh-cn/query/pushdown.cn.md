@@ -3,7 +3,16 @@
 
 ### 启用查询下压
 
-默认情况下，查询下压功能未开启。如果要开启查询下压，需要在 `kylin.properties` 文件中删除 `kylin.query.pushdown.runner-class-name=io.kyligence.kap.storage.parquet.adhoc.PushDownRunnerSparkImpl` 这一配置项前的注释符号，使其生效。
+默认情况下，查询下压功能未开启。如果要开启查询下压，需要执行以下两步：
+
+- 在 `kylin.properties` 文件中删除 `kylin.query.pushdown.runner-class-name=io.kyligence.kap.storage.parquet.adhoc.PushDownRunnerSparkImpl` 这一配置项前的注释符号，使其生效。
+
+- 重启 KAP
+
+  ```
+  $KYLIN_HOME/bin/kylin.sh stop
+  $KYLIN_HOME/bin/kylin.sh start
+  ```
 
 查询下压开启后，当 Cube 无法返回所需的查询结果时，默认情况下，将被重定向至 Spark SQL。用户也可以手动配置，选择 Hive 或者 Impala 作为查询下压的引擎。有关配置方法，参见[查询下压配置](../config/pushdown/README.md)章节。
 

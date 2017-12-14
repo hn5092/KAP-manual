@@ -4,7 +4,16 @@ KAP supports query pushdown from KAP 2.4. If there are queries which cannot be f
 
 #### Enable Query Pushdown
 
-Query pushdown is turned off by default. To turn it on, remove the Comment symbol in front of the configuration item `kylin.query.pushdown.runner-class-name=io.kyligence.kap.storage.parquet.adhoc.PushDownRunnerSparkImp` in the file `kylin.properties` to bring it into effect. 
+Query pushdown is turned off by default. To turn it on, do the following:
+
+- Remove the Comment symbol in front of the configuration item `kylin.query.pushdown.runner-class-name=io.kyligence.kap.storage.parquet.adhoc.PushDownRunnerSparkImp` in the file `kylin.properties` to bring it into effect. 
+
+- Restart KAP:
+
+  ```
+  $KYLIN_HOME/bin/kylin.sh stop
+  $KYLIN_HOME/bin/kylin.sh start
+  ```
 
 With query pushdown turned on, queries that cannot get results from Cubes will be redirected to Spark SQL by default. You may also configure it manually, and choose Hive or Impala as the default engine to be redirected. Please refer to [Important Configurations](../config/basic_settings.en.md) for more configuration settings.
 
