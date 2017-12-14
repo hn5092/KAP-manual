@@ -245,7 +245,7 @@ KAP allows mapping an LDAP group to the administrator role: In kylin.properties,
 ```
 kylin.security.acl.admin-role=admin
 ```
-When upgrading from the version below 2.5.4 to 2.5.4 or above, the uppercase and lowercase of LDAP name shall keep original.
+When upgrading from 2.5.4 ealier version to 2.5.4 or later, please remove the ROLE_ in this setting that required in the 2.5.4 earlier version and the LDAP group name is now case sensitive and shall not be all capital any more.
 
 ### Enable LDAP
 
