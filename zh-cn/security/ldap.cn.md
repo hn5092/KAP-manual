@@ -227,7 +227,7 @@ kylin.security.ldap.service-group-search-base=ou=Groups,dc=example,dc=com
 ### 配置管理员群组和默认角色
 
 在 KAP 中，可将一个 LDAP 群组映射成管理员角色：在 kylin.properties 中，将"properties
-kylin.security.acl.admin-role"设置为 LDAP 组名（组名大小写保留原样）。在当前例子中，在 LDAP 中使用群组"admin"来管理所有 KAP 管理员，那么这里应该设置为:
+kylin.security.acl.admin-role"设置为 LDAP 组名（组名大小写保留原样）。在当前例子中，将 LDAP 中组"admin"定义为 KAP 管理员，那么这里应该设置为:
 
 ```properties
 kylin.security.acl.admin-role=admin
