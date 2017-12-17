@@ -24,6 +24,21 @@
 #### 路径变量
 * jobId - `必选` `string` Job id.
 
+#### 响应信息
+
+- uuid - Job id.
+- last_modified - Job最后修改时间.
+- name - Job名称.
+- type - Job执行的任务类型，如（BUILD，MERGE，REFRESH）.
+- duration - Job耗时.
+- related_cube - Job相关联的Cube.
+- related_segment - Job相关联的Segment.
+- exec_start_time - 执行开始时间.
+- exec_end_time - 执行结束时间.
+- steps - 步骤.
+- job_status - Job状态，如（RUNNING，PENDING，STOPPED，ERROR，DISCARDED，FINISHED）.
+- progress - Job进度.
+
 #### 响应示例
 ```json
 {  
