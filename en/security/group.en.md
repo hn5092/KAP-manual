@@ -18,7 +18,11 @@ If row-level/table-level/column-level access permissions of a user group have be
 
 The permissions set for user and user group the user belongs to will work for the user simultaneously. For instance, a user group is forbidden to access Table A, a user in this group is prohibited to access Table B, then the user is not allowed to access Table A and Table B.
 
-When a user belongs to multiple groups, the user's permission will take the all project-level permissions, and will be restricted by all table-level and row-level permissions inherited from different groups.
+When a user belongs to multiple groups, the user will inherit the project-level permissions from the groups he/she belongs to. The logical relation between row-level／column-level permissions the user inherits from different groups is and.
+
+For example, if user A belongs to two groups, North_Region and East_Region, and the two groups have been restricted row-level permission Region='North' and Region='East' respectively, then user A will inherit the two row-level permissions and the logical relation between them is and, i.e. Region='North' AND Region ='East'. 
+
+If user A belongs to two groups, North_Region and East_Region, and the two groups have been limited column-level permission, that is, group North_Region cannot access column East_sales and group East_Region cannot access column North_sales, then user A cannot access both columns.
 
 ### Manage User Group
 
