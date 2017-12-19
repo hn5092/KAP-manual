@@ -1,6 +1,10 @@
 ## 多节点部署
 
-本节介绍如何将 KyAnalyzer 部署到多个 Linux 服务器（本文用 node1, node2, …, 表示）以及如何配置多节点可共同访问的 mysql。
+本节介绍如何将 KyAnalyzer 部署到多个 Linux 服务器（本文用 node1, node2, …, 表示）以及如何配置多节点可共同访问的 mysql。KyAnalyzer 多节点部署的基本架构如图所示：
+
+![多节点部署架构图](images/multi-node_deploy.cn.png)
+
+多节点部署的基本操作如下：
 
 首先，修改每个 KyAnalyzer 节点的 conf/kyanalyzer.properties 配置文件，将其中的
 "kap.host" 和 "kap.port" 两个配置项分别设置为同一个 KAP 服务器的地址和端口（或者配置为同一个 KAP 集群上的多个 Query Server）。
@@ -93,12 +97,12 @@
   </Cluster>
   ```
 
-  第三，将 node1 的 repository/configuration.xml 文件拷贝至其他节点，并替换各节点的 KyAnalyzer 安装目录下的 repository/configuration.xml 文件，修改该文件，将 < Repository > 中 < Cluster > 域的 ID 设置为 node2, node3, 等。
 
-  第四，如果 KyAnalyzer 不是新安装的并且之前启动过，则需要修改 repository/data/workspaces/default/workspace.xml 文件，将其中的 < FileSystem > 和 < PersistenceManager > 按上述第二步中 < Repository > 的 < Workspace > 域下的配置进行修改。如果 KyAnalyzer 从未启动过，可跳过此步骤。
+第三，将 node1 的 repository/configuration.xml 文件拷贝至其他节点，并替换各节点的 KyAnalyzer 安装目录下的 repository/configuration.xml 文件，修改该文件，将 < Repository > 中 < Cluster > 域的 ID 设置为 node2, node3, 等。
 
-  至此，多节点部署完成，您可以启动各节点下的 KyAnalyzer，各节点中的元数据为同一份元数据。
+第四，如果 KyAnalyzer 不是新安装的并且之前启动过，则需要修改 repository/data/workspaces/default/workspace.xml 文件，将其中的 < FileSystem > 和 < PersistenceManager > 按上述第二步中 < Repository > 的 < Workspace > 域下的配置进行修改。如果 KyAnalyzer 从未启动过，可跳过此步骤。
 
+至此，多节点部署完成，您可以启动各节点下的 KyAnalyzer，各节点中的元数据为同一份元数据。
 
 
 

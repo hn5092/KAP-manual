@@ -1,6 +1,10 @@
 ## Multi-node Deployment
 
-This section introduces how to deploy KyAnalyzer to multiple Linux servers (indicated by node1, node2,…, in this article) and how to configure mysql which multiple nodes may access.
+This section introduces how to deploy KyAnalyzer to multiple Linux servers (indicated by node1, node2,…, in this article) and how to configure mysql which multiple nodes may access. The architecture diagram of multi-node deployment is as below: 
+
+![KyAnalyzer Multi-node Deployment Architecture](images/multi-node_deploy.en.png)
+
+To deploy KyAnalyzer to multiple nodes, do the following: 
 
 Firstly, modify the configuration file *conf/kyanalyzer.properties* for each KyAnalyzer node and respectively set "kap.host" and "kap.port" to the IP address and port of the same KAP server (or configure to multiple Query Servers in one KAP cluster).
 
@@ -92,12 +96,12 @@ Secondly, do the following steps to modify the *repository/configuration.xml* fi
   </Cluster>
   ```
 
-  Thirdly, copy the file *repository/configuration.xml* under node1 to other node, replace the file *repository/configuration.xml* under KyAnalyzer installation directory of each node, modify this file, and set the ID of < Cluster > in < Repository > domain to node2, node3 and etc.
 
-  Fourthly, if you have installed KyAnalyzer and started it, you need to modify the file *repository/data/workspaces/default/workspace.xml* and change < FileSystem > and < PersistenceManager > in it based on the configuration under < Workspace > of < Repository > domain in the above second step. If KyAnalyzer has not been started before, you may ignore this step.
+Thirdly, copy the file *repository/configuration.xml* under node1 to other node, replace the file *repository/configuration.xml* under KyAnalyzer installation directory of each node, modify this file, and set the ID of < Cluster > in < Repository > domain to node2, node3 and etc.
 
-  So far, you complete KyAnalyzer multi-node deployment. You may start KyAnalyzer under each node. Each node shares the same metadata.
+Fourthly, if you have installed KyAnalyzer and started it, you need to modify the file *repository/data/workspaces/default/workspace.xml* and change < FileSystem > and < PersistenceManager > in it based on the configuration under < Workspace > of < Repository > domain in the above second step. If KyAnalyzer has not been started before, you may ignore this step.
 
+So far, you complete KyAnalyzer multi-node deployment. You may start KyAnalyzer under each node. Each node shares the same metadata.
 
 
 
