@@ -24,6 +24,21 @@
 #### Path Variable
 * jobId - `required` `string` job id.
 
+#### Response Information
+
+- uuid - job id.
+- last_modified - the last modified time of job
+- name - job name.
+- type - job type, such as BUILD, MERGE, REFRESH.
+- duration - job duration.
+- related_cube - Cube related to job.
+- related_segment - segment related to job.
+- exec_start_time - execution start time.
+- exec_end_time - execution end time.
+- steps - steps executed.
+- job_status - job status: RUNNING，PENDING，STOPPED，ERROR，DISCARDED，FINISHED.
+- progress - job progress.
+
 #### Response Example
 ```
 {  
