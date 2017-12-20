@@ -23,7 +23,8 @@ In KyAnalyzer V2.5.0 or later version, KyAnalyzer will read the KAP license and 
 3. KyAnalyzer depends on the jar package of mondrian. It needs to be downloaded and copied to KyAnalyzer's path in order to comply with open source license.
    * For KyAnalyzer V2.1.3 and earlier versions, a user is required to download the jar from [mondrian-kylin-1.2.jar]( https://github.com/Kyligence/kylin-mondrian/blob/master/build/mondrian-kylin-1.2.jar), and copy it to the folder *kyanalyzer-server-{version}/tomcat/webapps/saiku/WEB-INF/lib*.
    * For KyAnalyzer with version later than 2.1.3, running the startup script will download and install the jar package automatically.
-   * If no public network is available, a user is required to download the jar from [mondrian-kylin-2.0.jar](https://github.com/Kyligence/kylin-mondrian/blob/master/build/mondrian-kylin-2.0.jar), and copy it to the folder *kyanalyzer-server-{version}/tomcat/webapps/saiku/WEB-INF/lib*.
+   * If no public network is available when installing KyAnalyzer V2.5-2.5.1, a user is required to download the jar from [mondrian-kylin-2.0.jar](https://github.com/Kyligence/kylin-mondrian/blob/master/build/mondrian-kylin-2.0.jar), and copy it to the folder *kyanalyzer-server-{version}/tomcat/webapps/saiku/WEB-INF/lib*.
+   * If no public network is available when installing KyAnalyzer V2.5.4 or above, a user is required to download the jar from [mondrian-kylin-2.1.jar](https://github.com/Kyligence/kylin-mondrian/blob/80ee8deb5e21746967a3204ac537aa0fb3d0b4e2/build/mondrian-kylin-2.1.jar), and copy it to the folder *kyanalyzer-server-{version}/tomcat/webapps/saiku/WEB-INF/lib*.
 
 4. Edit *kyanalyzer.properties* under *kyanalyzer-server-{version}/conf*, and set KAP host and KAP port. *kap.host* represents KAP's IP (default value: localhost) and *kap.port* represents KAP's app port (default port: 7070). And you can configure *mondrian.properties* by referring to *conf/mondrian.properties.template*. (Note: we have moved 'kap.host' and 'kap.port' to *kyanalyzer.properties* since KAP V2.2, and also add *mondrian.properties* to *kyanalyzer-server/conf/*.)
 
@@ -119,80 +120,25 @@ KyAnalyzer will save the data under the directories: *repository* and *data*. Su
         <td></td>
     </tr>
     <tr>
-        <td>&gt;=2.4.0</td>
-        <td>&gt;=2.4.0</td>
+        <td>2.5-2.5.1</td>
+        <td>2.5-2.5.1</td>
         <td>2.0</td>
         <td>✅</td>
         <td>✅</td>
         <td>✅</td>
         <td>✅</td>
-        <td>Recommended</td>
-    </tr>
-</table>
-
-### Compatibility of KyAnalyzer, Apache Kylin and Mondrain-kylin
-
-<table>
-    <tr>
-    <th>Apache Kylin</th>
-    <th>KyAnalyzer</th>
-    <th>Mondrian-Kylin</th>
-    <th>COUNT_DISTINCT</th>
-    <th>TOP_N</th>
-    <th>Save Calculated Measure</th>
-    <th>Normal Query</th>
-    <th></th>
-    </tr>
-    <tr>
-        <td>ALL</td>
-        <td>&gt;=2.1</td>
-        <td>1.0</td>
-        <td>❎</td>
-        <td>❎</td>
-        <td>❎</td>
-        <td>✅</td>
         <td></td>
     </tr>
     <tr>
-        <td>&lt;1.5.4.1</td>
-        <td>&gt;=2.1</td>
-        <td>1.1</td>
+        <td>&gt;=2.5.4</td>
+        <td>&gt;=2.5.4</td>
+        <td>2.1</td>
         <td>✅</td>
-        <td>❎</td>
-        <td>❎</td>
-        <td>❎</td>
-        <td></td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>latest</td>
     </tr>
-    <tr>
-        <td>1.5.4.1</td>
-        <td>&gt;=2.1</td>
-        <td>1.1</td>
-        <td>✅</td>
-        <td>❎</td>
-        <td>❎</td>
-        <td>✅</td>
-        <td></td>
-    </tr> 
-    <tr>
-        <td>&gt;1.5.4.1</td>
-        <td>&gt;=2.1</td>
-        <td>1.1</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>❎</td>
-        <td>✅</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>&gt;2.0.0</td>
-        <td>&gt;=2.4.0</td>
-        <td>2.0</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>Recommended</td>
-    </tr>  
 </table>
 
 ### Authentication
