@@ -6,6 +6,8 @@ When you load the table for the first time into a project or upgrade KAP from a 
 
 Table-level Access Control needs to be set by project basis. That means even if you sync the same Hive or Kafka table from data source twice in different projects, table-level access control need to be set independently for those two projects. 
 
+Before you set table-level permission for a user, please ensure that the user has the access permission to the project.  
+
 ###Manage Table-level Access Control 
 
 #### Grant Access
