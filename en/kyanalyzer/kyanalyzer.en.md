@@ -119,8 +119,8 @@ KyAnalyzer will save the data under the directories: *repository* and *data*. Su
         <td></td>
     </tr>
     <tr>
-        <td>2.5-2.5.1</td>
-        <td>2.5-2.5.1</td>
+        <td>2.5.0-2.5.1</td>
+        <td>2.5.0-2.5.1</td>
         <td>2.0</td>
         <td>✅</td>
         <td>✅</td>
