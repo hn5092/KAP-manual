@@ -8,15 +8,15 @@
 
   ​
 
-- Disable（禁用）：无法查询的cube，当cube经过构建会自动转成ready状态。
+- Disable（禁用）：已经设计好但尚未构建因而无法查询的cube。当cube经过构建自动转成ready状态后，才能查询。
 
   - 最多可执行的操作有：验证SQL、删除、编辑、构建、启用（将具有segment的cube转化为ready状态）、清理（清空cube下所有segment数据）、克隆（复制cube，但不复制segment数据）、查看cube(查看cube描述信息)、备份（备份cube元数据）、编辑cube详细信息（查看或编辑cube的json信息）。
 
   ![disable cube ](images/cube_segment_manage/disable_action.png)
 
-  ​
+  - 当 cube 启用后重新禁用时，将无法编辑维度和度量。此时如果需要编辑维度和度量，需要重新设计并构建新的 cube。
 
-- Ready（启用）：cube有segment且可以查询，无法直接删除或清理。
+- Ready（启用）：设计完成且经过构建的cube，此时cube包含segment且可以查询，无法直接删除或清理。
   - 最多可执行的操作有：验证SQL、编辑、禁用（将具有ready cube转化为disable状态）、克隆（复制cube，但不复制segment数据）、查看cube(查看cube描述信息)、备份（备份cube元数据）
 
   ![ready cube](images/cube_segment_manage/ready_action.png)

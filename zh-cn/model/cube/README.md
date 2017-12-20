@@ -9,5 +9,7 @@
 - [度量设计 - TopN](topN.cn.md)
 - [度量设计 - 近似 Distinct Count](count_distinct.cn.md)
 - [度量设计 - 精确 Distinct Count](count_distinct_precise.cn.md)
+- [度量设计 - 近似 Percentile](percentile_ approx.cn.md)
 - [明细表索引](table_index.cn.md)
+
 
