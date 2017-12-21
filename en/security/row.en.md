@@ -8,7 +8,7 @@ When you load the table for the first time into a project or upgrade KAP from a 
 
 Row-level Access Control needs to be set by project basis. That means even if you load the same Hive or KAFKA table from data source twice in different projects, row-level access control needs to be set independently for those two projects. 
 
-Before you set row-level permission for a user, please ensure that the user has the access permission to the project.  
+Before you set row-level access control for a user, please ensure that the user has the access permission to the project.  
 
 ### Manage Row-level Access Control
 
