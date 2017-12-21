@@ -1,8 +1,8 @@
-## percentile_approx 近似查询
+## percentile_approx 查询
 
-KAP 支持 percentile 函数，在 KAP V2.5.4 以上的版本中，函数名称改为 percentile_approx，二者用法和效果相同。该函数通过近似百分比分析的 SQL 查询实现亚秒级查询延迟。在 KAP 中，该函数提供三种返回类型： 'percentile(100)'、'percentile(1000)' 和 'percentile(10000)'。
+KAP 支持 percentile 函数。在 KAP V2.5.4 以上的版本中，函数名称改为 percentile_approx，二者用法和效果相同。如果您预定义了百分比度量，则此类SQL查询可以实现亚秒级延迟。在 KAP 中，该函数提供三种返回类型： 'percentile(100)'、'percentile(1000)' 和 'percentile(10000)'，表示精确度逐步提升，同时占用的存储资源也越多。一般场景中，我们推荐您使用percentile(100)即可。
 
-### percentile_approx
+### percentile_approx简介
 
 percentile_approx 函数返回数值的第 p 个百分位数的值，其语法如下：
 
@@ -23,7 +23,7 @@ GROUP BY seller_id
 
 ![添加度量页面](images/percentile_approximate/1.cn.png)
 
-第二步，输入度量名称，选择 **PENCENTILE_APPROX** 为表达式，选择参数值，然后根据需要选择返回类型 'percentile(100)'、'percentile(1000)' 或 'percentile(10000)'。默认返回 'percentile(10000)'。这里的返回类型即上述语法中的 B，值越大，结果的精确度越高。
+第二步，输入度量名称，选择 **PENCENTILE_APPROX** 为表达式，选择参数值，然后根据需要选择返回类型 'percentile(100)'、'percentile(1000)' 或 'percentile(10000)'。这里的返回类型即上述语法中的 B，值越大，结果的精确度越高。
 
 ![添加度量页面](images/percentile_approximate/return_type.cn.png)
 
