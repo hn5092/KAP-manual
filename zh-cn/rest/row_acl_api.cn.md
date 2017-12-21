@@ -25,6 +25,12 @@
 #### 请求示例
 `请求路径:http://host:port/kylin/api/acl/row/learn_kylin/DEFAULT.KYLIN_SALES`
 
+#### 请求信息
+
+- Type - 目前只有值：CLOSED，表示等号 =
+- leftExpr - 需要限定的值
+- rightExpr - 需要限定的值，rightExpr 必须与 leftExpr 相等
+
 #### 响应示例
 ```json
 {
@@ -142,7 +148,8 @@
 #### 请求主体
 * condsWithColumn - `必选` `map` 列与conditions的键值对，详见下面的请求示例中的请求主体
 
-#### 请求示例
+#### **请求示例**
+
 `请求路径:http://host:port/kylin/api/acl/row/learn_kylin/user/DEFAULT.KYLIN_SALES/ADMIN`
 
 ```
@@ -172,6 +179,7 @@
 ```
 
 #### 响应示例
+
 ```json
 {"code":"000","data":"","msg":"update user's black column list"}
 ```

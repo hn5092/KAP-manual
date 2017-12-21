@@ -24,6 +24,12 @@
 #### Request Example
 `Request Path:http://host:port/kylin/api/acl/row/learn_kylin/DEFAULT.KYLIN_SALES`
 
+#### Request Information
+- Type - the value can only be CLOSED currently, indicating equal =
+- leftExpr - value to be restricted
+- rightExpr - value to be restricted, rightExpr shall be equal to leftExpr
+
+
 #### Response Example
 ```json
 {
