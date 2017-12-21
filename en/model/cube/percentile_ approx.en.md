@@ -1,8 +1,8 @@
 ## Approximate Percentile
 
-Since KAP V2.5.4, there is a new function, percentile_approx, introduced, which was called percentile previously in KAP. Both of them have the same algorithm and result. This new function aims at (sub-)second latency for **approximate** percentile analytics SQL queries. In KAP, it has three return types: 'percentile(100)', 'percentile(1000)' and 'percentile(10000)'.
+KAP supports the function **percentile**. Since KAP V2.5.4, it changed to **percentile_approx**. Both of them have the same algorithm and result. If you've pre-defined percentile measure, such SQL query will enable sub-second query latency. In KAP, this function has three return types: 'percentile(100)', 'percentile(1000)' and 'percentile(10000)'. The higher return value means higher accuracy and higher storage resources occupied. We recommend you use percentile(100) in general scenario.
 
-### percentile_approx
+### percentile_approx introduction
 
 percentile_approx returns the value of below which a given percentage of observations in a group of observations fall. For example, the 20th percentile is the value below which 20% of the observations may be found. Its syntax is as below:
 
@@ -22,7 +22,7 @@ Firstly, in the third step of Cube creation, click **Add Measure** in the left c
 
 ![Add Measure](images/percentile_approximate/1.en.png)
 
-Secondly, input your measure name, select **PENCENTILE_APPROX** as Expression, select Param Value, and then select return type 'percentile(100)', 'percentile(1000)' and 'percentile(10000)' on demand. By default, it will return 'percentile(10000)'. The return type means B listed in the above syntax. Higher value means higher accuracy.
+Secondly, input your measure name, select **PENCENTILE_APPROX** as Expression, select Param Value, and then select return type 'percentile(100)', 'percentile(1000)' and 'percentile(10000)' on demand. The return type means B listed in the above syntax. Higher value means higher accuracy and higher storage resources occupied.
 
 ![Select return type](images/percentile_approximate/return_type.en.png)
 
