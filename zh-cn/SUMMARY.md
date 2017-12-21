@@ -124,6 +124,7 @@
     * [管理用户](security/user.cn.md)
     * [管理用户组](security/group.cn.md)
     * [集成LDAP登录](security/ldap.cn.md)
+    * [集成Kerberos](security/kerberos.cn.md)
     * [管理权限](security/acl.cn.md)
     * [管理数据访问](security/data_access_control.cn.md)
       *  [表级访问权限](security/table.cn.md)
