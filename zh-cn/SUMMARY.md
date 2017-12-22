@@ -86,12 +86,15 @@
           * [聚合函数](query/adv_sql/aggregate_function.cn.md)
 * [自助式敏捷 BI 工具 KyAnalyzer](kyanalyzer/README.md)
     * [KyAnalyzer 简介](kyanalyzer/kyanalyzer.cn.md)
+    * [常用配置项](kyanalyzer/configuration.cn.md)
+    * [多节点部署](kyanalyzer/multi-nodes_deploy.cn.md)
+
+
     * [数据过滤、排序、排名及汇总计算](kyanalyzer/analysis.cn.md)
     * [下钻、上卷及交叉钻取](kyanalyzer/drill-down.cn.md)
     * [Calculated Member](kyanalyzer/calculated_member.cn.md)
     * [导出结果](kyanalyzer/export.cn.md)
     * [保存并共享结果](kyanalyzer/save_and_share.cn.md)
-    * [多节点部署](kyanalyzer/multi-nodes_deploy.cn.md)
 * [与可视化工具集成](integration/README.md)
     * [驱动程序](driver/README.md)
         * [JDBC驱动](driver/jdbc.cn.md)
