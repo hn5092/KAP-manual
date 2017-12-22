@@ -1,12 +1,12 @@
-## KyAnalyzer General Configurations
+## KyAnalyzer Configurations
 
-This section introduces KyAnalyzer's general configurations. KyAnalyzer is configured through the items of conf/kyanalyzer.properties and mondrian.properties under the directory of *conf*. In the following, we will describe the two configurations in details:
+This section introduces KyAnalyzer's configurations. KyAnalyzer is configurable through the file of kyanalyzer.properties and mondrian.properties under the KyAnalyzer installation directory of *conf*. In the following, we will describe the two configuration files in details:
 
 ###Configurations of kyanalyzer.properties
 
 **kyanalyzer.olap.nonempty**
 
-Specify if the empty result is hidden. The default value is  `true`.
+Specify if the empty result is hidden in the query. The default value is  `true`.
 
 **kyanalyzer.web.export.csv.name**
 
@@ -22,11 +22,11 @@ Specify the format of excel file (xls or xlsx) exported from the query result. T
 
 **kyanalyzer.web.export.excel.numberformat**
 
-Specify the data format in the excel file exported from query result. The default value is `#,##0.00`. The value is rounded to two decimal places.
+Specify the number format in the excel file exported from query result. The default value is `#,##0.00`. The value is rounded to two decimal places.
 
 **kyanalyzer.format.numberformat**
 
-Specify the data format in the query. The default value is  `#,##0.00`. The value is rounded to two decimal places.
+Specify the number format in the query. The default value is  `#,##0.00`. The value is rounded to two decimal places.
 
 **kap.host**
 
