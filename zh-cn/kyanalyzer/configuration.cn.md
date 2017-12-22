@@ -1,12 +1,12 @@
-## KyAnalyzer 常用配置项
+## KyAnalyzer 配置项
 
-本节介绍 KyAnalyzer 的常用配置项。KyAnalyzer 通过 *conf* 文件夹下的 kyanalyzer.properties 和 mondrian.properties 进行配置。下面详细介绍这两个配置项：
+本节介绍 KyAnalyzer 的常用配置项。KyAnalyzer 通过 安装路径下*conf* 文件夹中的 kyanalyzer.properties 和 mondrian.properties 进行配置。下面详细介绍这两个配置文件中的配置项：
 
 ###kyanalyzer.properties 的配置项
 
 **kyanalyzer.olap.nonempty**
 
-该参数指定是否隐藏为空的结果，默认进行隐藏，默认值为 `true`。
+该参数指定是否隐藏查询中为空的结果，默认进行隐藏，默认值为 `true`。
 
 **kyanalyzer.web.export.csv.name**
 
