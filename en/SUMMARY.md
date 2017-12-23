@@ -30,6 +30,7 @@
     * [KyStorage Configuration](config/kystorage_settings.en.md)
     * [JDBC Metastore Configuration](config/metadata_jdbc.en.md)
     * [Spark Dynamic Allocation](config/spark_dynamic_allocation.en.md)
+    * [Use SparkSQL during Cube Build](config/use_sparksql_during_cube_build.en.md)
     * [Compression Settings](config/compression_settings.en.md)
     * [Query Pushdown Configuration](config/pushdown/README.md)
         * [Native SparkSQL Integration](config/pushdown/pushdown_native.en.md)
