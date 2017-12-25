@@ -8,10 +8,11 @@
 
 [任务报警](alerting.cn.md)
 
-[技术支持和诊断](diag.cn.md)
+[系统诊断与任务诊断](diag.cn.md)
 
 [自助式诊断与优化服务KyBot](kybot/README.md)
 
 - [KyBot快速入门](kybot/kybot.cn.md)
 - [KyBot案例分析](kybot/case.cn.md)
+
 

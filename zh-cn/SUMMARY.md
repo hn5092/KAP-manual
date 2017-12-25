@@ -133,7 +133,7 @@
 * [监控和诊断](troubleshooting/README.md)
     * [日志](troubleshooting/logging.cn.md)
     * [任务报警](troubleshooting/alerting.cn.md)
-    * [技术支持和诊断](troubleshooting/diag.cn.md)
+    * [系统诊断与任务诊断](troubleshooting/diag.cn.md)
     * [自助式诊断与优化服务KyBot](kybot/README.md)
         * [KyBot快速入门](kybot/kybot.cn.md)
         * [KyBot案例分析](kybot/case.cn.md)

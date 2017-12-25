@@ -1,18 +1,11 @@
-## 获取支持
+## 获取技术支持
 
-### Kyligence 支持
+### Kyligence 技术支持
 
-Kyligence可以帮助客户安装、配置、优化和运行KAP，帮助客户解决大规模数据处理和分析问题。Kyligence既支持客户将KAP安装在客户的数据中心，也支持安装在公有云，如Amazon Web Services和Microsoft Azure等。
+Kyligence 可以帮助客户安装、配置、优化和运行 KAP，帮助客户解决大规模数据处理和分析问题。Kyligence 既支持客户将 KAP 安装在客户的数据中心，也支持安装在公有云，如 Amazon Web Services 和 Microsoft Azure 等。
 
-如果你是Kyligence的注册用户，你可以
+如果您是 Kyligence 的注册用户，在使用 KAP 过程中遇到问题，可以：
 
-* 发送邮件给 support@kyligence.io 获取支持
-* 在KyBot支持网站，提交工单
-
-### 报告问题
-
-如果您在使用KAP的过程中遇到了系统级异常，请及时联系我们，您可以
-
-* 发送邮件给 support@kyligence.io 获取支持
-* 在KyBot支持网站，提交工单
+* 发送邮件至 support@kyligence.io 获取支持
+* 在 [KyBot 支持网站](https://kybot.io/home)，依次点击**进入我的 KyBot -> 帮助中心 -> 我的工单**，创建并提交工单获取技术支持。详情参见 [KyBot 一节](kybot/kybot.cn.md)。
 
