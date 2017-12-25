@@ -10,6 +10,8 @@ Column-level access control needs to be set by project basis. That means even if
 
 Before you set column-level access control for a user, please ensure that the user has the access control to the project.  
 
+> Tips: The configuration of access control is impacted by BI frontend cache.
+
 ### Manage Column-level Access Control
 
 #### Add Restriction

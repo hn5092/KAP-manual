@@ -54,5 +54,7 @@ Specify the maximum amount of data in one query. The default value is `100000`.
 
 Specify if the generated sql is formatted or not. The default value is  `true`.
 
+**mondrian.rolap.star.disableCaching**
 
+Specify if the cache is disabled or not. The default value is `false`.
 

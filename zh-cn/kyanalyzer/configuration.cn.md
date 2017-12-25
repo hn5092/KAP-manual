@@ -54,5 +54,9 @@
 
 该参数指定是否对产生的 sql 格式化，默认进行格式化，默认值为 `true`。
 
+**mondrian.rolap.star.disableCaching**
+
+该参数指定是否禁用缓存，默认值为 `false`。
+
 
 

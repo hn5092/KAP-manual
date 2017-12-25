@@ -8,6 +8,8 @@ Table-level Access Control needs to be set by project basis. That means even if 
 
 Before you set table-level access control for a user, please ensure that the user has the access permission to the project.  
 
+> Tips: The configuration of access control is impacted by BI frontend cache.
+
 ###Manage Table-level Access Control 
 
 #### Grant Access
