@@ -56,5 +56,5 @@ Specify if the generated sql is formatted or not. The default value is  `true`.
 
 **mondrian.rolap.star.disableCaching**
 
-Specify if the cache is disabled or not. The default value is `false`.
+Specify if the query cache is disabled. The default value is `false`.
 
