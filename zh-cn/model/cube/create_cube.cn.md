@@ -114,7 +114,8 @@ ORDER BY SUM(PRICE)
 在这里添加的配置项可以在Cube级别覆盖从kylin.properties配置文件读取出来的全局配置。在这个案例中，我们可以直接采用默认配置，在此不做任何修改。
 
 关于cube配置参数的修改可以参见[多重配置重写](../../config/config_override.cn.md)。
-​	
+
+在**高级设置**中，可以选择 Cube 构建引擎。默认情况下，KAP 使用 MapReduce 作为 Cube 构建引擎，但也可以手动切换成 Spark(Beta)。关于如何配置和使用 Spark 构建引擎的详情，参见[配置 Spark 构建引擎](../../config/spark_engine_conf.cn.md)。	
 
 ### Cube概览
 

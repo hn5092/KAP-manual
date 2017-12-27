@@ -38,6 +38,8 @@ KAP在集群结点上安装完毕后，还需要对KAP的参数进行配置，�
 
 [Spark资源动态配置](spark_dynamic_allocation.cn.md)
 
+[配置 Spark 构建引擎](spark_engine_conf.cn.md)
+
 [压缩配置](compression_settings.cn.md)
 
 [查询下压配置](pushdown/README.md)

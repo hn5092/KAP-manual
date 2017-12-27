@@ -37,6 +37,8 @@ Continue reading:
 
 [Use SparkSQL during Cube Build](use_sparksql_during_cube_build.en.md)
 
+[Configure Spark Build Engine](spark_engine_conf.en.md)
+
 [Compression Settings](compression_settings.en.md)
 
 [Query Pushdown Configuration](pushdown/README.md)

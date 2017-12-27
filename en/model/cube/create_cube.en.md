@@ -96,7 +96,9 @@ Build **Scheduler** is a cube build plan. Check the scheduler box and set a buil
 Step5: **Table index**. KAP Plus series product include this  feature. Details please refer to [table index section](table_index.en.md).
 
 Step 6: **Advanced Setting**. The configuration added here can override the global ones read from file `kylin.properties`. We suggest don't change any configuration in this case.
-​	
+
+In this step, you may choose Cube build engine. By default, KAP uses MapReduce as build engine. But you may also switch to **Spark(Beta)** manually. For the detailed information on how to configure and use Spark as build engine, please see [Configure Spark Build Engine](../../config/spark_engine_conf.en.md).
+
 Step 7: **Overview**. Please read the information carefully. Click `Save` button if everything is desired. Then click `Yes` button in pop-up menu.
 ​	
 Finally Cube creation is done. The new Cube will be shown in Cube list in the refreshed Cube list page. The state of the Cube is disable for that it has not been built.
