@@ -1,6 +1,6 @@
 ## Computed Column
 
-**Computed Column** allows you to pre-define operations like data extraction/transformation/redefinition in modes, and thus enhance the data semantic abstraction. By replacing runtime calculation with offline cube construction, KAP's pre-calculation capability is fully utilized. As a result, query performance could improve significantly. It's allowed to use Hive UDF in computed column, so that existing business codes can be reused.
+Computed Column** allows you to pre-define operations like data extraction/transformation/redefinition in modes, and thus enhance the data semantic abstraction. By replacing runtime calculation with offline cube construction, KAP's pre-calculation capability is fully utilized. As a result, query performance could improve significantly. It's allowed to use Hive UDF in computed column, so that existing business codes can be reused.
 
 ### For KAP 2.4.4 and versions above
 
@@ -16,11 +16,9 @@ The following information is required:
 
 ![](images/computed_column_en.2.kap244.png)
 
-+ **Column**: Display the name of the created computed column.
-
-+ **Expression**: Definition of the computed column. Columns in the expression can refer to any table in current model, however you have to make sure the column reference complies to **Table.Column**.
-
-+ **Data Type**: The data type of the created column.
+- **Column**: Display the name of the created computed column.
+- **Expression**: Definition of the computed column. Columns in the expression can refer to any table in current model, however you have to make sure the column reference complies to **Table.Column**.
+- **Data Type**: The data type of the created column.
 
 After successfully submitting and saving the computed column, you will see the new column `total_amount` appearing in the table:
 
@@ -40,18 +38,13 @@ When query pushdown is enabled and there is no cube can be hit on for your query
 
 Implicit Query is **enabled** by default. To disable it you'll need to remove `kylin.query.transformers=io.kyligence.kap.query.util.ConvertToComputedColumn` in `KYLIN_HOME/conf/kylin.properties`
 
-#### Rules on using Computed Column##
+#### Rules on using Computed Column
 
 - Computed column must be defined on a fact table.
-
 - Expression of computed column supports across a fact table or a dimension table.
-
 - It's allowed to use any column from any tables in current model to consist computed column's expression.
-
 - Under one project, there is one-to-one mapping between computed column and expression defined. That means under different models, computed column with same name can be defined on the condition that two computed columns share the same expression. 
-
 - Under one project, computed column cannot duplicate with any other column in current model.
-
 - If a user has been restricted access to the column that is used in the expression of a computed column, the user will not be able to query the computed column either. 
 
 ### Advanced Functions

@@ -1,6 +1,8 @@
 ## KyAnalyzer 配置项
 
-本节介绍 KyAnalyzer 的常用配置项。KyAnalyzer 通过 安装路径下*conf* 文件夹中的 kyanalyzer.properties 和 mondrian.properties 进行配置。下面详细介绍这两个配置文件中的配置项：
+本节介绍 KyAnalyzer 的常用配置项。KyAnalyzer 通过安装路径下*conf* 文件夹中的 kyanalyzer.properties 和 mondrian.properties 进行配置。下面详细介绍这两个配置文件中的配置项。
+
+> 注意：以下配置项修改后，必需重启 KyAnalyzer 服务器才能使更改生效。
 
 ###kyanalyzer.properties 的配置项
 
