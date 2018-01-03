@@ -38,6 +38,9 @@ BI工具往往会发送类似“select \* from fact\_table”的查询语句，�
 ### kylin.query.disable-cube-noagg-sql
 Cube中存储的是经过预处理的数据，这些数据在大多数情况下和原数据存在差异，例如聚合操作合并了一些数据行。这导致非聚合查询从Cube拿到的数据不准确。该参数被用来解决该问题，如果它被设置成 true ，Cube则不能被用于回答非聚合查询，一个典型的例子为“select \* from fact\_table limit 1000”。其他符合条件的Table Index 和 Query Pushdown 会代替Cube回答此类查询。该参数可在 Cube 级别重写。
 
+### kylin.query.convert-create-table-to-with
+有一些BI工具会在查询中创建临时表获中间表。将该配置为true可以将查询中创建表的语句转成with语句，当后续查询需要使用到该临时表获中间表时，会被转化成包含With的查询语句。修改这个配置后，创建中间表获临时表的查询可以击中可匹配的Cube。
+
 ## JVM参数
 
 ​        在`$KYLIN_HOME/conf/setenv.sh` （如果版本低于2.4.0，`$KYLIN_HOME/bin/setenv.sh`) 中，为KYLIN_JVM_SETTINGS给出了两种示例配置。默认配置使用的内存较少，用户可以根据自己的实际情况，注释掉默认配置并取消另一配置前的注释符号以启用另一配置，从而为KAP示例分配更多的内存资源。
