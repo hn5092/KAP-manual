@@ -43,9 +43,9 @@
 | pmod(INT a, INT b), pmod(DOUBLE a, DOUBLE b) |           返回正的 `a` 除以 `b` 的余数。           | pmod(10, 7), pmod(10.15, 5.15)           |
 | positive(INT a), positive(DOUBLE a)      |                 返回 `a`。                  | positive(10), positive(10.15)            |
 | negative(INT a), negative(DOUBLE a)      |                 返回 `-a`。                 | negative(10), negative(10.15)            |
-| shiftleft(TINYINT\|SMALLINT\|INT a, INT b), shiftleft(BIGINT a, INT b) |                  按位左移。                   | shiftleft(10, 5), shiftleft(20, 5)       |
-| shiftright(TINYINT\|SMALLINT\|INT a, INT b), shiftright(BIGINT a, INT b) |                  按位右移。                   | shiftright(10, 5), shiftright(20, 5)     |
-| shiftrightunsigned(TINYINT\|SMALLINT\|INTa, INT b),shiftrightunsigned(BIGINT a, INT b) |                 无符号按位右移。                 | shiftrightunsigned(10, 5), shiftrightunsigned(20, 5) |
+| shiftleft(TINYINT/SMALLINT/INT a, INT b), shiftleft(BIGINT a, INT b) |                  按位左移。                   | shiftleft(10, 5), shiftleft(20, 5)       |
+| shiftright(TINYINT/SMALLINT/INT a, INT b), shiftright(BIGINT a, INT b) |                  按位右移。                   | shiftright(10, 5), shiftright(20, 5)     |
+| shiftrightunsigned(TINYINT/SMALLINT/INTa, INT b),shiftrightunsigned(BIGINT a, INT b) |                 无符号按位右移。                 | shiftrightunsigned(10, 5), shiftrightunsigned(20, 5) |
 | bin(BIGINT a)                            |               以二进制格式返回数值。                | bin(10)                                  |
 | conv(BIGINT num, INT from_base, INT to_base) |  将数值 num 从 from_base 进制转化到 to_base 进制。   | conv(-17,10,-18)                         |
 | greatest(T v1, T v2, ...)                |               返回一列值中的最大值。                | greatest(5,10,15)                        |
@@ -101,7 +101,7 @@
 | 函数语法                                     | 描述                                       | 示例                                       |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | ascii(string str)                        | 返回 str 中首个 ASCII 字符串的整数值。                | ascii('abcde')                           |
-| concat(string\|binary A, string\|binary B...) | 返回将 A 和 B 按顺序连接在一起的字符串，如：concat('foo', 'bar') 返回 'foobar'。 | concat('foo', 'bar')                     |
+| concat(string/binary A, string/binary B…) | 返回将 A 和 B 按顺序连接在一起的字符串，如：concat('foo', 'bar') 返回 'foobar'。 | concat('foo', 'bar')                     |
 | concat_ws(string SEP, string A, string B...) | 类似 concat() ，但使用自定义的分隔符 SEP              | concat_ws(',','abc','def','gh')          |
 | elt(N int,str1 string,str2 string,str3 string,...) | 如果 N=1，返回 str1；如果 N=2，返回 str2，等等。如果 N 小于 1 或大于参数个数，返回 NULL。ELT() 是 FIELD() 的反运算。 | elt(2,'hello','world')                   |
 | field(val T,val1 T,val2 T,val3 T,...)    | 返回 val T 在 val1 T, val2 T, val3 T, ...清单的索引。如果 val T 未找到，则返回 0。FIELD() 是 ELT() 的反运算。 | field('world','say','hello','world')     |
@@ -114,7 +114,7 @@
 | lpad(string str, int len, string pad)    | 左边添加 pad 参数输入的字符使字符串长度为 len，然后返回该字符串。    | lpad('abc',10,'td')                      |
 | ltrim(string A)                          | 返回从 A 的开头（左手边）删除空白字符后的字符串。例如，ltrim(‘ foobar ‘) 结果为 ‘foobar’。 | ltrim('foobar')                          |
 | regexp_extract(string subject, string pattern, int index) | 返回使用模式提取的字符串。例如，regexp_extract(‘foothebar’, ‘foo(.*?)(bar)’, 2) 返回 ‘bar’。注意，使用预定义字符类型有一些必要的关注：使用 ‘\s’ 作为第二个参数将匹配字母 s；匹配空白字符 ‘\\s’ 是必须的。‘index’ 参数是 Java 正则 Matcher group() 方法索引。 | regexp_extract('foothebar', 'foo(.*?)(bar)', 2) |
-| regexp_replace(string INITIAL_STRING, string PATTERN, string REPLACEMENT) | 返回用 REPLACEMENT 的实例替换 INITIAL_STRING 中所有 PATTERN 内定义的与 java 正则表达式的语法匹配的所有子串。 | regexp_replace('foobar', 'oo\|ar', '')   |
+| regexp_replace(string INITIAL_STRING, string PATTERN, string REPLACEMENT) | 返回用 REPLACEMENT 的实例替换 INITIAL_STRING 中所有 PATTERN 内定义的与 java 正则表达式的语法匹配的所有子串。 | regexp_replace('foobar', 'oo\ar', '')    |
 | repeat(string str, int n)                | 重复 `str` n 次。                            | repeat('abc', 3)                         |
 | reverse(string A)                        | 返回反转后的字符串。                               | reverse('abc')                           |
 | rpad(string str, int len, string pad)    | 右边添加 pad 参数输入的字符使字符串长度为 len，然后返回该字符串。    | rpad('abc',10,'td')                      |
@@ -122,8 +122,8 @@
 | sentences(string str, string lang, string locale) | 将一个自然语言文本字符串标记为单词和句子，每个句子在适当的句子边界被拆分并且作为一个单词数组返回。‘lang’ 和 ‘locale’ 是可选参数。例如，sentences(‘Hello there! How are you?’) 返回 ( (“Hello”, “there”), (“How”, “are”, “you”))。 | sentences('Hello there! How are you?')   |
 | space(int n)                             | 返回 n 个空格的字符串。                            | space(3)                                 |
 | split(string str, string pat)            | 从 pat 左右分解 str（ pat 是一个正则表达式）。           | split('abtcdtef','t')                    |
-| substr(string\|binary A, int start) substring(string\|binary A, int start) | 返回从 start 位置到末尾的字符串 A 的子字符串或字节数组的部分。例如，substr(‘foobar’, 4) 返回结果为 ‘bar’。 | substr('foobar', 4)                      |
-| substr(string\|binary A, int start, int len) substring(string\|binary A, int start, int len) | 返回从 start 位置开始长度为 len 的 A 的字符串或字节数组的部分。例如，substr(‘foobar’, 4, 1) 返回结果为 ‘b’。 | substr('foobar', 4, 1)                   |
+| substr(string/binary A, int start) substring(string/binary A, int start) | 返回从 start 位置到末尾的字符串 A 的子字符串或字节数组的部分。例如，substr(‘foobar’, 4) 返回结果为 ‘bar’。 | substr('foobar', 4)                      |
+| substr(string/binary A, int start, int len) substring(string/binary A, int start, int len) | 返回从 start 位置开始长度为 len 的 A 的字符串或字节数组的部分。例如，substr(‘foobar’, 4, 1) 返回结果为 ‘b’。 | substr('foobar', 4, 1)                   |
 | substring_index(string A, string delim, int count) | 返回字符串 A 中 delim 分隔符第 count 次匹配前的子字符串。如果 count 是正数，会返回所有到左边最后分隔符（从左边计算）的值。如果 count 是负数，会返回所有到右边最后分隔符（从右边计算）。当搜索 delim 时，Substring_index 是大小写敏感的。示例：substring_index(‘www.apache.org’, ‘.’, 2) = ‘www.apache’。 | substring_index('www.apache.org', '.', 2) |
 | trim(string A)                           | 返回从 A 两端去除空白字符后的字符串。例如，trim(‘ foobar ‘) 返回的结果为 ‘foobar’。 | trim('foobar')                           |
 | upper(string A) ucase(string A)          | 返回转换字符串 A 中所有字符为大写后的字符串。例如，upper(‘fOoBaR’) 返回的结果为 ‘FOOBAR’。 | upper('fOoBaR')                          |
