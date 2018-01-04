@@ -48,7 +48,7 @@ Some BI tools always send query like "select \* from fact\_table", but the proce
 Cube stores the pre-processed data, which is different from original data in most cases. It results in inaccurate answer from Cube if the query has no aggregation function. 
 This configuration is used to address the issue. If it's set to *true*, Cube is forbidden to answer queries that contain no aggregation functions, such as query "select \* from fact\_table limit 1000". Table Index or Query Pushdown will answer the query instead of Cube in this case. This configuration can be overridden at **Cube** level.
 
-### kylin.query.convert-create-table-to-with
+### kylin.query.convert-create-table-to-with (Beta)
 
 Some BI software will send Create Table statement to create a permanent or temporary table in the data source. If this setting is set to true, the create table statement in the query will be converted to a with statement, when a later query utilizes the table that the query created in the previous step, the create table statement will be converted into a subquery, which can hit on a Cube if there is one to serve the query. 
 
