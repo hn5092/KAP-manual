@@ -25,7 +25,10 @@ Microsoft Power BI Desktop 是由微软推出的一款商业智能的专业分�
     ![选中 Kyligence Analytics Platform](images/powerbi/Picture5.png)
 
 2.  在连接字符串文本框中输入所需的数据库信息。请选择 **DirectQuery** 作为数据连接方式。
-      ![数据连接方式：DirectQuery](images/powerbi/Picture6.png)
+
+      > 注：不需要将http://填入Server处
+      
+![数据连接方式：DirectQuery](images/powerbi/Picture6.png)
 
 3.  输入账号密码进行身份验证。
       ![登录连接 KAP](images/powerbi/Picture7.png)
