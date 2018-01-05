@@ -9,7 +9,7 @@ Microsoft Power BI Desktop 是由微软推出的一款商业智能的专业分�
 
 1. 在 [Kyligence Account 页面](http://account.kyligence.io)下载 KAP Power BI DirectQuery 插件。
 
-2. 将 DirectQuery 插件文件（.mez 文件）复制到 *C:\Users\<user_name>\Documents\Microsoft Power BI Desktop\Custom Connectors* 文件夹，如果没有 *Custom Connectors* 这个文件夹，可以手动创建一个；
+2. 将 DirectQuery 插件文件（.mez 文件）复制到 *C:\Users\\(user_name)\Documents\Microsoft Power BI Desktop\Custom Connectors* 文件夹，如果没有 *Custom Connectors* 这个文件夹，可以手动创建一个；
 
 3. 打开 Power BI Desktop 中 **Options and settings** 下的 **Options**；
 
