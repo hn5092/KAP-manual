@@ -8,7 +8,7 @@ For the installation information, please refer to [Kyligence ODBC Driver tutoria
 ### Install Power BI DirectQuery plugin
 1.  Download KAP Power BI DirectQuery plugin from [Kyligence Account Page](http://account.kyligence.io).
 
-2.  Copy the plugin file (.mez) of DirectQuery to the folder *C:\Users\<user_name>\Documents\Microsoft Power BI Desktop\Custom Connectors*. If this folder does not exist, please create one.
+2.  Copy the plugin file (.mez) of DirectQuery to the folder *C:\Users\\(user_name)\Documents\Microsoft Power BI Desktop\Custom Connectors*. If this folder does not exist, please create one.
 
 3.  In Power BI Desktop, open **Options** under **Options and settings**.
 
