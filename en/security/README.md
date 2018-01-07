@@ -18,3 +18,4 @@ Continue reading:
 - [Row-level Access Control](row.en.md)
 - [Column-level Access Control](column.en.md)
 
+[Permission Settings for Result Exporting](query_result_export.en.md)

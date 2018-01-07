@@ -17,3 +17,5 @@
 - [表级访问权限](table.cn.md)
 - [行级访问权限](row.cn.md)
 - [列级访问权限](column.cn.md)
+
+[配置查询结果导出权限](query_result_export.cn.md)
