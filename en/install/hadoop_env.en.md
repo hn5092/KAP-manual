@@ -32,9 +32,25 @@ In addition, if KAP runs in a sandbox (virtual machine), please assign below res
 
 ### Configuration of Hive
 
-When using *Beeline* as Hive client, KAP needs more privileges. Please update Hive configuration to add the following item:
+When using *Beeline* as Hive client, KAP needs more privileges. 
 
-```hive.security.authorization.sqlstd.confwhitelist=dfs.replication|hive.exec.compress.output|hive.auto.convert.join.noconditionaltask.*|mapred.output.compression.type|mapreduce.job.split.metainfo.maxsize```
+Please add following properties to kylin.properties:
+
+> “-n root” means user account is root;
+>
+> “-u jdbc:hive2://localhost:10000” means connecting jdbc via the host;
+>
+> ```properties
+> kylin.source.hive.beeline-params=-n root --hiveconf hive.security.authorization.sqlstd.confwhitelist.append='mapreduce.job.*|dfs.*' -u jdbc:hive2://localhost:10000
+> ```
+
+> Please update Hive configuration to add the following item:
+>
+> ```properties
+> hive.security.authorization.sqlstd.confwhitelist=dfs.replication|hive.exec.compress.output|hive.auto.convert.join.noconditionaltask.*|mapred.output.compression.type|mapreduce.job.split.metainfo.maxsize
+> ```
+
+
 
 ### Recommended Hardware
 

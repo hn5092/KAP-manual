@@ -13,7 +13,7 @@ KAP 需要一个状态良好的 Hadoop 集群作为其运行环境，以便为�
 + 创建和操作 HBase 表（如果您使用 JDBC 连接元数据存储，该项可忽略）
 + 提交 MapReduce 任务
 
-> 如果您使用 Beeline 连接 Hive，需要进行如下配置已使得 KAP 能够获取相应的操作权限：(更多[beeline命令说明](https://cwiki.apache.org/confluence/display/Hive/HiveServer2+Clients#HiveServer2Clients-BeelineCommandOptions))
+> 如果您使用 Beeline 连接 Hive，需要进行如下配置（修改在kylin.properties）已使得 KAP 能够获取相应的操作权限：(更多[beeline命令说明](https://cwiki.apache.org/confluence/display/Hive/HiveServer2+Clients#HiveServer2Clients-BeelineCommandOptions))
 >
 > “-n root” 指用root账户连接；
 >
@@ -23,7 +23,11 @@ KAP 需要一个状态良好的 Hadoop 集群作为其运行环境，以便为�
 > kylin.source.hive.beeline-params=-n root --hiveconf hive.security.authorization.sqlstd.confwhitelist.append='mapreduce.job.*|dfs.*' -u jdbc:hive2://localhost:10000
 > ```
 
-
+> 并将如下参数写入hive-site.xml：hive.security.authorization.sqlstd.confwhitelist
+>
+> ```properties
+> hive.security.authorization.sqlstd.confwhitelist=dfs.replication|hive.exec.compress.output|hive.auto.convert.join.noconditionaltask.*|mapred.output.compression.type|mapreduce.job.split.metainfo.maxsize
+> ```
 
 ### 支持的企业级平台
 
