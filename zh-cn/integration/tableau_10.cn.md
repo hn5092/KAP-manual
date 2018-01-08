@@ -5,7 +5,7 @@
 有关安装信息，参考页面 [Kyligence ODBC 驱动程序教程](../driver/kyligence-odbc.cn.md)。
 
 ### 连接 KAP Server
-在Tableau 10.1创建新的数据连接，单击左侧面板中的`其他数据库(ODBC)`，并在弹出窗口中选择`KylinODBCDriver` 
+在Tableau 10.X创建新的数据连接，单击左侧面板中的`其他数据库(ODBC)`，并在弹出窗口中选择`Kyligence ODBC Driver` 
 
 
 ![](images/tableau_10/step1.PNG)
@@ -50,4 +50,10 @@ Tableau 10.1中有两种数据源连接类型，选择 `连接`选项以确保�
 如果希望发布到Tableau服务器, 点击`服务器`菜单并选择`发布工作簿`。
 ![](images/tableau_10/step14.PNG)
 
+### 查看KAP明细数据
+> 注：查看KAP明细数据需要在KAP Cube中配置了Table Index或KAP开启了查询下压。
 
+如图，当在Tableau中查看聚合数据时，点击需要查看明细的行或列。点击如图所示图标，选择查看数据的图标。
+![](images/tableau_10/step15.PNG)点击查看完整数据，即可看到对应的数据明细
+
+![](images/tableau_10/step16.PNG)

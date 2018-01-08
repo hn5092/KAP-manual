@@ -5,7 +5,7 @@
 For the installation information, please refer to [Kyligence ODBC Driver tutorial](../driver/kyligence-odbc.en.md).
 
 ### Connect to Kylin Server
-Connect Using Driver: Start Tableau 10.1 desktop, click `Other Database(ODBC)` in the left panel and choose KylinODBCDriver in the pop-up window. 
+Connect Using Driver: Start Tableau 10.1 desktop, click `Other Database(ODBC)` in the left panel and choose `Kyligence ODBC Driver` in the pop-up window. 
 
 
 ![](images/tableau_10/1.png)
@@ -36,4 +36,14 @@ Now you can start to enjou analyzing with Tableau 10.1.
 ### Publish to Tableau Server
 If you want to publish local dashboards to a Tableau Server, just expand `Server` menu and select `Publish Workbook`.
 
+### View Detail Data
 
+> Note: Table Index or Query Pushdown need to be enabled in order to query detail data from KAP.
+
+You can drill down from aggregated data to detail data in Tableau. First, click on the data you would like to view detail data of on the report, then click the icon as shown. 
+
+![](images/tableau_10/step15.PNG)
+
+Click on the Full Data tab and then you can view the drill-down detail data.
+
+![](images/tableau_10/step16.PNG)
