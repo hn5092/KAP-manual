@@ -1,4 +1,4 @@
-## KyAnalyzer Self-service Agile BI Tools
+## KyAnalyzer Self-service Agile BI Tool
 
 KyAnalyzer allows users to analyze their data easier and quicker.
 
