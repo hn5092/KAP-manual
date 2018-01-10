@@ -35,7 +35,7 @@ KAP提供什么样的权限？
 | 编辑Cube详情             | Yes          | Yes           | Yes        | No        | No    |
 | 添加、禁用／启用，清理Cube      | Yes          | Yes           | Yes        | No        | No    |
 | 构建、管理Cube            | Yes          | Yes           | Yes        | Yes       | No    |
-| 添加、编辑、删除Cube访问权限     | Yes          | Yes           | Yes        | No        | No    |
+| 添加、编辑、删除Cube         | Yes          | Yes           | Yes        | No        | No    |
 | 查看、编辑及删除Cube草稿       | Yes          | Yes           | Yes        | No        | No    |
 | 查看分析页面               | Yes          | Yes           | Yes        | Yes       | Yes   |
 | 在分析页面查询              | Yes          | Yes           | Yes        | Yes       | Yes   |

@@ -34,7 +34,7 @@ Once project-level access permission has been set for a user/group, access permi
 | Edit Cube  Description                   | Yes          | Yes           | Yes        | No        | No    |
 | Add,  enable/disable, clone, purge cube  | Yes          | Yes           | Yes        | No        | No    |
 | Build, manage  Cube                      | Yes          | Yes           | Yes        | Yes       | No    |
-| Add, edit,  delete Cube access           | Yes          | Yes           | Yes        | No        | No    |
+| Add, edit,  delete Cube                  | Yes          | Yes           | Yes        | No        | No    |
 | View, edit and  delete Cube draft        | Yes          | Yes           | Yes        | No        | No    |
 | View Insight  page                       | Yes          | Yes           | Yes        | Yes       | Yes   |
 | Query Insight  page                      | Yes          | Yes           | Yes        | Yes       | Yes   |
