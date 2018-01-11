@@ -24,8 +24,8 @@ FROM KYLIN_SALES
 
 第二步，输入度量名称，选择 **CORR** 为表达式，选择度量。这里需要注意度量的数据类型应为上文所提到的。
 
-![选择CORR表达式](images/pcorr/expression.cn.png)
+![选择CORR表达式](images/pcorr/expression_cn.png)
 
 第三步，设计并构建完 cube 后，转至**分析**页面进行查询。查询结果返回 SELLER ID 和 BUYER ID的线性关系。
 
-![SQL 查询](images/pcorr/cube_query.cn.png)
+![SQL 查询](images/pcorr/query_cn.png)
