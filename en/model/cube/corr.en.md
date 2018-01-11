@@ -1,8 +1,8 @@
-## CORR
+## CORR(Beta) ##
 
 correlation confficients are used in statics to measure how strong a relationship is between two variables. In KAP V2.5.5, it supports the function Pearson's correlation, which is named *pcorr*. In this version, the  function is not supported to be used in pushdown query. Hence, please choose the measures in advance during cube build.
 
-### CORR introduction
+### CORR introduction ###
 
 Corr function will return a value to find the relationship between the two variables. The value is between -1 and 1, where 1 indicates a strong positive relationship. For example, for every positive increase in one variable, there will be a positive increase in the aother. 0 means that there is no relationship between the two variables and -1 means that when one variable has a positive increase, the another one will have a negative decrease.  Its syntax is as below:
 
@@ -15,7 +15,7 @@ SELECT pcorr(BUYER_ID, SELLER_ID)
 FROM KYLIN_SALES
 ```
 
-### How to use
+### How to use ###
 
 Firstly, in the third step of Cube creation, click *Add Measure* in the left corner to add a new measure.
 
