@@ -128,6 +128,7 @@
     * [User Management](security/user.en.md)
     * [User Group Management](security/group.en.md)
     * [Integrate with LDAP](security/ldap.en.md)
+    * [Kerberos](security/kerberos.en.md)
     * [Manage Access Permissions](security/acl.en.md)
     * [Manage Data Access](security/data_access_control.en.md)
       * [Table-level Access Control](security/table.en.md)
