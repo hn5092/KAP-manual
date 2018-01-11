@@ -65,6 +65,7 @@
         * [Measure-Approximate Distinct Count](model/cube/count_distinct.en.md)
         * [Measure-Precise Distinct Count](model/cube/count_distinct_precise.en.md)
         * [Measure-Approximate Percentile](model/cube/percentile_ approx.en.md)
+        * [Measure-CORR](model/cube/corr.en.md)
         * [Table Index](model/cube/table_index.en.md)
     * [Verify SQL](model/verify_sql.en.md)
     * [Build Cube](model/build_cube.en.md)
