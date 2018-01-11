@@ -23,8 +23,8 @@ Firstly, in the third step of Cube creation, click *Add Measure* in the left cor
 
 Secondly, input your measure name, select *PCORR* as Expression, select Param Value. The data type should be considered when you choose the measure.
 
-![Choosing Expression](images/pcorr/expression.en.png)
+![Choosing Expression](images/pcorr/expression_en.png)
 
 Thirdly, design and build Cube, then go to *Insight* page to simulate query. You will get the result as below.
 
-![SQL Query](images/pcorr/cube_query.en.png)
+![SQL Query](images/pcorr/query_en.png)
