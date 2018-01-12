@@ -57,6 +57,15 @@ Where, the parameters are described as below:
 
 ![Connect Successfully](images/kyligence_odbc_04_en.png)
 
+## ODBC Connection String
+
+Some BI tools support connect data source with ODBC connection string. In that case, you may use below connection string as reference:
+
+```
+DRIVER={KyligenceODBCDriver};SERVER=locahost;PORT=7070;PROJECT=learn_kylin
+```
+
+Please replace SERVER, PORT and PROJECT with your KAP settings.
 
 ## Special Reminder
 

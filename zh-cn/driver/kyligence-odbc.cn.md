@@ -60,6 +60,15 @@ Kyligence ODBC 驱动程序目前仅支持 Windows 环境。
 
 ![连接成功](images/kyligence_odbc_04_cn.png)
 
+## 连接字符串
+
+有一些BI工具支持不使用DSN而直接配置ODBC连接字符串的形式访问数据源。在这种场景下，用户可以使用下面的字符串格式进行配置：
+
+```
+DRIVER={KyligenceODBCDriver};SERVER=locahost;PORT=7070;PROJECT=learn_kylin
+```
+
+请将SERVER，PORT及PROJECT中的信息替换成你所使用的KAP的信息。
 
 ## 特别提醒
 
