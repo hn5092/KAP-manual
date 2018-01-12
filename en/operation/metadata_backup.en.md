@@ -57,3 +57,29 @@ more kylin_sales_cube.json
 ```
 
 In addition, metadata backup is also a tool for troubleshooting; when the system got error, the administrator can dump metadata and then check it easily.
+
+### Metadata backup in user interface
+
+Besides using the command line to backup metadata, KAP also supports to backup metadata in the user interface.
+
+- **Instance metadata backup**
+
+Go to the system page and click the backup button to backup instance metadata. When seeing the following message it means a successful backup is taken:
+
+![instance metadata backup](images/instance_backup_en.png)
+
+- **Project metadata backup**
+
+Click the project list button(at the top of the page) and choose the project which needs to backup. Then unfold the action menu and click the backup button. When seeing the following message it means a successful backup is taken:
+
+![project page](images/project_page_en.png)
+
+![project metadata backup](images/project_backup_en.png)
+
+- **Cube metadata backup**
+
+Go to the studio page and switch to Cube. Then choose one cube and unfold the action menu backup metadata. When seeing the following message it means a successful backup is taken:
+
+![studio page](images/studio_page_en.png)
+
+![cube metadata backup](images/Cube_backup_en.png)
