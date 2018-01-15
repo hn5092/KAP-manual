@@ -64,13 +64,13 @@ Besides using the command line to backup metadata, KAP also supports to backup m
 
 - **Instance metadata backup**
 
-Go to the system page and click the backup button to backup instance metadata. The instance metadata will backup in the KAP installing path (e.g. /root/kap-plus-2.5-hbase1.x-236/kap-plus-2.5.5-alpha3.1-hbase1.x/meta_backups).  The name will be generated as meta_current time (e.g. meta_2018_01_11_07_01_47).
+Go to the system page and click the backup button to backup instance metadata. The instance metadata will backup in the KAP installed path (e.g. /root/kap-plus-2.5-hbase1.x-236/kap-plus-2.5.5-alpha3.1-hbase1.x/meta_backups).  The name will be generated as meta_current time (e.g. meta_2018_01_11_07_01_47).
 
 ![instance metadata backup](images/instance_backup_en.png)
 
 - **Project metadata backup**
 
-Click the project list button(at the top of the page) and choose the project which needs to backup. Then unfold the action menu and click the backup button. The project metadata will backup in the KAP installing path and the name will be generated as project_project name_current time (e.g. project_learn_kylin_2018_01_11_19_03_09).
+Click the project list button(at the top of the page) and choose the project which needs to backup. Then unfold the action menu and click the backup button. The project metadata will backup in the KAP installed path and the name will be generated as project_project name_current time (e.g. project_learn_kylin_2018_01_11_19_03_09).
 
 ![project page](images/project_page_en.png)
 
@@ -78,7 +78,7 @@ Click the project list button(at the top of the page) and choose the project whi
 
 - **Cube metadata backup**
 
-Go to the studio page and switch to Cube. Then choose one cube and unfold the action menu backup metadata. The Cube metadata will backup in the KAP installing path and the name will be generated as cube_cube name_current time (e.g. cube_corr_2018_01_11_19_04_21).
+Go to the studio page and switch to Cube. Then choose one cube and unfold the action menu backup metadata. The Cube metadata will backup in the KAP installed path and the name will be generated as cube_cube name_current time (e.g. cube_corr_2018_01_11_19_04_21).
 
 ![studio page](images/studio_page_en.png)
 
