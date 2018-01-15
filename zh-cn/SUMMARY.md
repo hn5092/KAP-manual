@@ -149,6 +149,7 @@
     * [元数据恢复](operation/metadata_restore.cn.md)
     * [元数据检查](operation/metadata_check.cn.md)
     * [垃圾清理](operation/storage_cleanup.cn.md)
+    * [服务器状态](operation/server_status.cn.md)
     * [跨集群迁移](operation/cluster_migration.cn.md)
     * [Hybrid Cube](operation/hybrid_cube.cn.md)
     * [配置Hadoop队列](operation/hadoop_queue.cn.md)
