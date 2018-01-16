@@ -18,11 +18,9 @@ There is one mandatory dimension, two dimensions belonging to one joint dimensio
 
 This is a sprouting graph of cuboid which has 7 dimensions and some details are hiden in order to help users understand.
 
-When MDC = 4, the cuboid which has over 4 dimensions will be pruned, such as ABCDEF, ABCDEG, ABCDE ,and ABCDF.
+When MDC = 4, the cuboid which has over 4 dimensions will be pruned, such as ABCDEF, ABCDEG, ABCDE, and ABCDF.
 
 When MDC = 3, the cuboid which has over 4 dimensions will be pruned, such as ABCDEF, ABCDEG, ABCD, and ABCE.
-
-cuboids containing more than 4 dimensions are ignored
 
 Considering the performance in cube build, the base cuboid and *some cuboid* will not be pruned although their dimensions are greater than MDC. For example, cuboid ABCEF is likely to be left. Meanwhile, a group of joint dimension or hierarchy dimension and mandatory dimensions need to be considered when using the MDC tool.
 
