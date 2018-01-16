@@ -1,6 +1,6 @@
 ## Metadata Backup
 
-Metadata is the most important data in KAP; Backup metadata is a regular task in daily operation. It is the only way to recover a KAP when the entire metadata is crashed causing KAP service is down due to some mishandling. In general, it is a good practice to backup metadata before each failover or system upgrade. This will ensure that the KAP service can roll back, and in the worst case still maintain the system's robustness.
+Metadata is the most important data in KAP. Backup metadata is a regular task in daily operation. It is the only way to recover a KAP when the entire metadata is crashed causing KAP service is down due to some mishandling. In general, it is a good practice to backup metadata before each failover or system upgrade. This will ensure that the KAP service can roll back, and in the worst case still maintain the system's robustness.
 
 KAP provides a tool for metadata backup; the usage is as follows：
 
