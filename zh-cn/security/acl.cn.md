@@ -39,7 +39,7 @@ KAP提供什么样的权限？
 | 查看、编辑及删除Cube草稿       | Yes          | Yes           | Yes        | No        | No    |
 | 查看分析页面               | Yes          | Yes           | Yes        | Yes       | Yes   |
 | 在分析页面查询              | Yes          | Yes           | Yes        | Yes       | Yes   |
-| 查看监控页面               | Yes          | Yes           | Yes        | No        | Yes   |
+| 查看监控页面               | Yes          | Yes           | Yes        | No        | No    |
 | 查看系统页面               | Yes          | No            | No         | No        | No    |
 | 管理系统                 | Yes          | No            | No         | No        | No    |
 | 管理用户／组               | Yes          | No            | No         | No        | No    |
