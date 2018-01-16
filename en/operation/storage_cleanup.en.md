@@ -20,7 +20,7 @@ The first one is a metadata tool, it has a delete parameter, which defaults to b
 
 During the first implementation of the tool, it is recommended to omit the delete parameter, which means only list all the resources need to be cleaned up for users to check, rather than actually start delete operation. After users confirm all listed resources are meant to be cleaned, then add the delete parameter and execute command. By default, the target resource list would be as following: 
 
-- Invalid lookup table mirror, dictionary, Cube statistics created 2 days ago
+- Invalid lookup table mirror, dictionary, Cube statistics
 - Action information and output of Cube build job had finished 30 days ago
 
 ### Clean Storage
