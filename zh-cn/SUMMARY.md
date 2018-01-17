@@ -132,6 +132,7 @@
     * [集成LDAP登录](security/ldap.cn.md)
     * [集成Kerberos](security/kerberos.cn.md)
     * [管理权限](security/acl.cn.md)
+    * [配置用户查询结果的导出权限](security/query_result_export.cn.md)
     * [管理数据访问](security/data_access_control.cn.md)
       *  [表级访问权限](security/table.cn.md)
       *  [行级访问权限](security/row.cn.md)
