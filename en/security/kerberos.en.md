@@ -1,8 +1,8 @@
-##Kerberos##
+## Kerberos ##
 
 Kerberos is a computer network authentication protocol that works on the basis of tickets. If the platform which installed KAP enable the protocol, some configurations need to be changed to support that.
 
-###KAP Configurations###
+### KAP Configurations ###
 
 In the properties file：`$KYLIN_HOME/conf/kylin.properties`, there are some parameters about kerberos which need to be noticed.
 
@@ -19,7 +19,7 @@ Optional parameters：
    - kap.kerberos.krb5.conf: the config file name of kerbero. Default value is krb5.conf
    - kap.kerberos.cache: the name of ticket cache file.  Default value is kap_kerberos.cache.
 
-###Standard Configuration###
+### Standard Configuration ###
 
 1. In the node (installed yarn) of NodeManager, the user which corresponds kerberos need to be added.
 
