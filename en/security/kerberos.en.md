@@ -17,7 +17,7 @@ Optional parameters：
 
    - kap.kerberos.ticket.refresh.interval.minutes: the refresh interval of tickets. The unit is minute and the default value is 720 minutes.
    - kap.kerberos.krb5.conf: the config file name of kerbero. Default value is krb5.conf
-   - kap.kerberos.cache: the name of ticket cache file.  Default value is kap_kerberos.cache.
+   - kap.kerberos.cache: the name of ticket cache file. Default value is kap_kerberos.cache.
 
 ### Standard Configuration ###
 
@@ -25,7 +25,7 @@ Optional parameters：
 
    For example:
 
-   The kerberos user(kylin) also need to be exist in the operation system of NodeManager.
+   The kerberos user(kylin) also need to exist in the operation system of NodeManager.
 
 2. Parameters about kerberos configuration:
 
