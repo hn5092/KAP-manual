@@ -146,6 +146,7 @@
     * [Metadata Backup](operation/metadata_backup.en.md)
     * [Metadata Restore](operation/metadata_restore.en.md)
     * [Metadata Check](operation/metadata_check.en.md)
+    * [Server Status](operation/server_status.en.md)
     * [Storage Clean Up](operation/storage_cleanup.en.md)
     * [Cross Hadoop Cluster Migration](operation/cluster_migration.en.md)
     * [Hadoop Queue Configuration](operation/hadoop_queue.en.md)
