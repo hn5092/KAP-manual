@@ -12,7 +12,7 @@
 
 * Query Node： 负责充当查询引擎的节点。
 
-  更多相关信息可以查看手册中关于[任务引擎高可用](../installation/advancing_installation/advancing_installation_ha.cn.md)和 [负载均衡与集群部署](../installation/advancing_installation/advancing_installation_load_balance.cn.md)的部分。
+  更多相关信息可以查看手册中关于[任务引擎高可用](../installation/advancing_installation/advancing_installation_ha.cn.md)和[负载均衡与集群部署](../installation/advancing_installation/advancing_installation_load_balance.cn.md)的部分。
 
 ### 服务器状态 ###
 
