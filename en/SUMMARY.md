@@ -130,6 +130,7 @@
     * [Integrate with LDAP](security/ldap.en.md)
     * [Kerberos](security/kerberos.en.md)
     * [Manage Access Permissions](security/acl.en.md)
+    * [Permission Settings for Result Exporting](security/query_result_export.en.md)
     * [Manage Data Access](security/data_access_control.en.md)
       * [Table-level Access Control](security/table.en.md)
       * [Row-level Access Control](security/row.en.md)
