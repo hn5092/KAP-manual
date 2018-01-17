@@ -1,8 +1,8 @@
 ## CORR(Beta) ##
 
-Correlation coefficients are used in statics to measure how strong a relationship is between two variables. In KAP V2.5.5, it supports the correlation coefficients function, which is named *corr*. 
+Correlation coefficient is used in statics to measure how strong a relationship is between two variables. In KAP V2.5.5, it supports the correlation coefficients function, which is named *corr*. 
 
-### CORR introduction ###
+### CORR Introduction ###
 
 CORR function will return a value to find the relationship between the two variables. The value is between -1 and 1, where 1 indicates a strong positive relationship. For example, for every positive increase in one variable, there will be a positive increase in the aother variable. 0 means that there is no relationship between the two variables and -1 means that when one variable has a positive increase, another one will have a negative decrease.  Its syntax is as below:
 
@@ -19,14 +19,14 @@ FROM KYLIN_SALES
 
 ### How to use ###
 
-Firstly, in the third step of Cube creation, click *Add Measure* in the left corner to add a new measure.
+Step 1, in the third step of Cube creation, click *Add Measure* in the left corner to add a new measure.
 
 ![Adding Measure](images/corr/cube_en.png)
 
-Secondly, input your measure name, select *CORR* as Expression, select Param Value. The data type should be considered when you choose the measure.
+Step 2, input your measure name, select *CORR* as Expression, select Param Value. The data type should be considered when you choose the measure.
 
 ![Choosing Expression](images/corr/expression_en.png)
 
-Thirdly, design and build Cube, then go to *Insight* page to query. You will get the result as below.
+Then continue to design and build Cube, and go to *Insight* page to query. You will get the result as below.
 
 ![SQL Query](images/corr/query_en.png)
