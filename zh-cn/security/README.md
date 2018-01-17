@@ -10,7 +10,11 @@
 
 [集成LDAP登录](ldap.cn.md)
 
-[管理ACL](acl.cn.md)
+[集成Kerberos](kerberos.cn.md)
+
+[管理访问权限](acl.cn.md)
+
+[配置查询结果导出权限](query_result_export.cn.md)
 
 [管理数据访问](data_access_control.cn.md)
 
@@ -18,4 +22,3 @@
 - [行级访问权限](row.cn.md)
 - [列级访问权限](column.cn.md)
 
-[配置查询结果导出权限](query_result_export.cn.md)
