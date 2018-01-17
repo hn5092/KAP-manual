@@ -12,7 +12,7 @@ select count(*) from table group by column_mandatory, column_joint1, column_join
 
 There is one mandatory dimension, two dimensions belonging to one joint dimension, two dimensions belonging to one hierarchy dimension and one normal dimension. So we treat them as 3 dimensions in cube pruning.
 
-### Schematic diagram of automatic pruning ###
+### Schematic Diagram of Automatic Pruning ###
 
 ![sprouting graph](images/cuboid_mdc.en.png)
 
