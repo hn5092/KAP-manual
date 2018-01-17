@@ -17,7 +17,7 @@ SELECT corr(TOTAL_AMOUNT, PRICE)
 FROM KYLIN_SALES
 ```
 
-### How to use ###
+### How to Use ###
 
 Step 1, in the third step of Cube creation, click *Add Measure* in the left corner to add a new measure.
 
