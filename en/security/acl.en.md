@@ -38,7 +38,7 @@ Once project-level access permission has been set for a user/group, access permi
 | View, edit and  delete Cube draft        | Yes          | Yes           | Yes        | No        | No    |
 | View Insight  page                       | Yes          | Yes           | Yes        | Yes       | Yes   |
 | Query Insight  page                      | Yes          | Yes           | Yes        | Yes       | Yes   |
-| View Monitor  page                       | Yes          | Yes           | Yes        | No        | No    |
+| View Monitor  page                       | Yes          | Yes           | Yes        | Yes       | No    |
 | View System  page                        | Yes          | No            | No         | No        | No    |
 | Manage system                            | Yes          | No            | No         | No        | No    |
 | Manage user/group                        | Yes          | No            | No         | No        | No    |
