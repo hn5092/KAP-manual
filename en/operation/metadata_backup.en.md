@@ -58,7 +58,7 @@ more kylin_sales_cube.json
 
 In addition, metadata backup is also a tool for troubleshooting; when the system got error, the administrator can dump metadata and then check it easily.
 
-### Metadata backup in user interface
+### Metadata Backup in User Interface
 
 Besides using the command line to backup metadata, KAP also supports to backup metadata in the user interface.
 
