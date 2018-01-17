@@ -10,12 +10,14 @@ Continue reading:
 
 [Integrate with LDAP](ldap.en.md)
 
-[Manage ACL](acl.en.md)
+[Kerberos](kerberos.en.md)
+
+[Manage Access Permissions](acl.en.md)
+
+[Permission Settings for Result Exporting](query_result_export.en.md)
 
 [Manage Data Access](data_access_control.en.md)
 
 - [Table-level Access Control](table.en.md)
 - [Row-level Access Control](row.en.md)
 - [Column-level Access Control](column.en.md)
-
-[Permission Settings for Result Exporting](query_result_export.en.md)
