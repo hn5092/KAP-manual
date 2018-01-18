@@ -1,12 +1,27 @@
 ## Computed Column
 
-Computed Column** allows you to pre-define operations like data extraction/transformation/redefinition in modes, and thus enhance the data semantic abstraction. By replacing runtime calculation with offline cube construction, KAP's pre-calculation capability is fully utilized. As a result, query performance could improve significantly. It's allowed to use Hive UDF in computed column, so that existing business codes can be reused.
+**Computed Column** allows you to pre-define actions like data extraction/ transformation/ redefinition in modes, and thus enhance the data semantic abstraction. By replacing runtime calculation with offline cube construction, KAP's pre-calculation capability is fully utilized. As a result, query performance could improve significantly. It's allowed to use Hive UDF in computed column, so that existing business codes can be reused.
 
-### For KAP 2.4.4 and versions above
+### Basic Concept and Rules
+
+- Expression：calculating logic. Expression of computed column supports across a fact table or a lookup table. Plus, it support cross use columns from different tables.
+- Consistent：
+  - In a project, computed column's name should be consistent with its expression (computed logic). It means one computed column can be defined once in one project, yet can be reused no matter how many times over different models.
+  - Reuse：computed column can be reused from one model to another model's same position. 
+- Position：
+  - Defining a computed column in fact table is highly suggested. In some cases, you can define computed column in special lookup tables, which is not stored as snapshot.
+  - Allow to define different computed columns in different models.
+- More：
+  - Under one project, computed column's name cannot duplicate with any other column in current model.
+  - Access：If a user has been restricted access to the column that is used in the expression of a computed column, the user will not be able to query the computed column either. 
 
 #### Create Computed Column
 
-KAP allows you to define computed columns for each model seperately. A column column is based on the fact table in the model and can use one or more columns from any table in the model to form an expression. For example, say you have a fact table named `kylin_sales` with following columns: `price` (price for each item in the transaction), `item_count` (number of sold items in the transaction) and `part_dt` (time when the transaction happens). You can define two more computed columns on `kylin_sales`: `total_amount = kylin_sales.price * kylin_sales.item_count` and `deal_year = year(kylin_sales.part_dt)`. Later when creating a cube, you can add computed columns total_amount/deal_year.
+KAP allows you to define computed columns for each model seperately. 
+
+For example, say you have a fact table named `kylin_sales` with following columns: `price` (price for each item in the transaction), `item_count` (number of sold items in the transaction) and `part_dt` (time when the transaction happens). You can define two more computed columns on `kylin_sales`: `total_amount = kylin_sales.price * kylin_sales.item_count` and `deal_year = year(kylin_sales.part_dt)`. 
+
+Later when creating a cube, you can add computed columns total_amount/deal_year.
 
 You can create computed columns by clicking the icon as the arrow points to:
 
@@ -28,24 +43,25 @@ After defining the computed columns in model, you need to use them to build cube
 
 ![](images/computed_column_en.3.png)
 
+
+
 #### Explicit Query vs. Implicit Query
 
-A computed column is logically appended to the table's column list after creation. You can query the computed column as if it was a normal column as long as it is pre-calculated in a Cube. Or if query pushdown is enabled in KAP, you can query the computed column directly regardless of whether the Cube containing the computed column is ready. Continuing with the last example, if you created and built a cube containing measure `sum(total_amount)`, KAP can answer queries like `select sum(total_amount) from kylin_sales`. We call it **Explicit Query** on computed columns. 
+**Query:** A computed column is logically appended to the table's column list after creation. You can query the computed column as if it was a normal column as long as it is pre-calculated in a Cube. 
 
-Or, the your can pretend that computed column is invisible from the table, and still use the expression behind the computed column to query. Continuing with the last example, when your query `select sum(price * item_count) from kylin_sales`, KAP will analyze the query and figure out that expression in `price * item_count` is replaceable by an existing computed column named `total_amount`. For better performance KAP will try to translate your original query to `select sum(total_amount) from kylin_sales`. We call it **Implicit Query** on computed columns.
 
-When query pushdown is enabled and there is no cube can be hit on for your query on computed column, KAP will analyze the query and translate the computed column to the original formula. Continuing with the previous example, if you query `select sum(total_amount) from kylin_sales` when there is no Cube ready to answer, and query pushdown is enabled, this query will be translated into `select sum(price * item_count) from kylin_sales`, and be pushed down to underlying SQL on Hadoop engine. 
+
+When **query pushdown** is enabled and there is no cube can be hit on for your query on computed column, KAP will analyze the query and translate the computed column to the original formula. Continuing with the previous example, if you query `select sum(total_amount) from kylin_sales` when there is no Cube ready to answer, and query pushdown is enabled, this query will be translated into `select sum(price * item_count) from kylin_sales`, and be pushed down to underlying SQL on Hadoop engine. 
+
+
+
+**Explicit Query**: If you created and built a cube containing measure `sum(total_amount)`, KAP can answer queries like `select sum(total_amount) from kylin_sales`. We call it **Explicit Query** on computed columns. 
+
+**Implicit Query:** your can pretend that computed column is invisible from the table, and still use the expression behind the computed column to query. Continuing with the last example, when your query `select sum(price * item_count) from kylin_sales`, KAP will analyze the query and figure out that expression in `price * item_count` is replaceable by an existing computed column named `total_amount`. For better performance KAP will try to translate your original query to `select sum(total_amount) from kylin_sales`. We call it **Implicit Query** on computed columns.
 
 Implicit Query is **enabled** by default. To disable it you'll need to remove `kylin.query.transformers=io.kyligence.kap.query.util.ConvertToComputedColumn` in `KYLIN_HOME/conf/kylin.properties`
 
-#### Rules on using Computed Column
 
-- Computed column must be defined on a fact table.
-- Expression of computed column supports across a fact table or a dimension table.
-- It's allowed to use any column from any tables in current model to consist computed column's expression.
-- Under one project, there is one-to-one mapping between computed column and expression defined. That means under different models, computed column with same name can be defined on the condition that two computed columns share the same expression. 
-- Under one project, computed column cannot duplicate with any other column in current model.
-- If a user has been restricted access to the column that is used in the expression of a computed column, the user will not be able to query the computed column either. 
 
 ### Advanced Functions
 
