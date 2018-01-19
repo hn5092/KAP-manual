@@ -31,7 +31,7 @@
     * [KyStorage配置参数](config/kystorage_settings.cn.md)
     * [JDBC Metastore配置](config/metadata_jdbc.cn.md)
     * [Spark资源动态配置](config/spark_dynamic_allocation.cn.md)
-    * [创建Cube过程中使用SparkSQL](config/use_sparksql_during_cube_build.cn.md)
+    * [构建Cube过程中使用SparkSQL](config/use_sparksql_during_cube_build.cn.md)
     * [配置 Spark 构建引擎](config/spark_engine_conf.cn.md)
     * [压缩配置](config/compression_settings.cn.md)
     * [查询下压配置](config/pushdown/README.md)
