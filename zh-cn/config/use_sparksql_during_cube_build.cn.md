@@ -1,4 +1,4 @@
-##创建Cube过程中使用SparkSQL##
+## 构建Cube过程中使用SparkSQL ##
 
 KAP在Cube构建过程中，默认应用Hive来做部分预计算。SparkSQL在Hive上有更好的性能，所以使用Spark SQL可能会在特定步骤中提高构建速度。
 
@@ -36,7 +36,7 @@ KAP在Cube构建过程中，默认应用Hive来做部分预计算。SparkSQL在H
 
 4. 重启KAP后，设置应生效。
 
-###其他说明###
+### 其他说明 ###
 
 请不要对于一些在SprakSQL配置中关于Hive客户端的设置（将在下方列出）感到疑惑，这些设置是用来访问Hive元数据和检索Hive表结构等。尽管看起来很相似，但所用目的并不相同。
 
