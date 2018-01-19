@@ -40,8 +40,12 @@ KAP 的`$KYLIN_HOME/conf/kylin.properties`配置文件中，kerberos相关参数
    - kap.kerberos.keytab={your keytab name}
 
 2. 配置FI机机账户，需要配置该用户拥有HDFS、HBase、Yarn、Spark、Hive、Kafka、Zookeeper相关权限，并将该账户(包含keytab和krb5.conf文件)导出。
-FI 账户配置请参考：[FI配置机机账户](http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000019&text=%252525u521B%252525u5EFA%252525u7528%252525u6237&lang=zh)
-[导出账户](http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000030&text=%252525u5BFC%252525u51FAKeytab%252525u6587%252525u4EF6&lang=zh)
+
+   FI 账户配置请参考(如果链接打不开，请复制url到浏览器地址栏访问)：
+   
+   - [FI配置机机账户](http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000019&text=%252525u521B%252525u5EFA%252525u7528%252525u6237&lang=zh) URL:http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000019&text=%252525u521B%252525u5EFA%252525u7528%252525u6237&lang=zh
+   
+   - [导出账户](http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000030&text=%252525u5BFC%252525u51FAKeytab%252525u6587%252525u4EF6&lang=zh) URL: http://support.huawei.com/hedex/hdx.do?docid=EDOC1000130541&id=it_61_50_000030&text=%252525u5BFC%252525u51FAKeytab%252525u6587%252525u4EF6&lang=zh
 
  机机账户需设置:
     - KAP期望读取的hive数据库  读权限
