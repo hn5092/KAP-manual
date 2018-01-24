@@ -15,8 +15,8 @@
 
 
 ### Path Variable
-- entity - `required` `string` 'METADATA' or 'CUBE'.
-- cacheKey - `required` `string` cache key, such as Cube name.
+- entity - `required` `string` 'all','project_schema','project_data' or 'project_acl'.
+- cacheKey - `required` `string` cache key, such as Project name.
 - event - `required` `string` 'create', 'update' or 'drop'.
 
 
@@ -30,6 +30,6 @@
 
 ### Path Variable
 
-- entity - `required` `string`, 'METADATA' or 'CUBE'.
-- cacheKey - `required` `string`, cache key, such as Cube name.
+- entity - `required` `string`, 'all','project_schema','project_data' or 'project_acl'.
+- cacheKey - `required` `string`, cache key, such as Project name.
 - event - `required` `string`, 'create', 'update' or 'drop'.
