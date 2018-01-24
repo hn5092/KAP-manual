@@ -18,8 +18,8 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 
 #### Request Body
-* offset - `optional` `int`, default 0, get data start subscript.
-* limit - `optional` `int `, default 10, how many lines would be included in each returned page.
+* pageOffset - `optional` `int`, default 0, get data start subscript.
+* pageSize - `optional` `int `, default 10, how many lines would be included in each returned page.
 * modelName - `optional` `string`, returned name is the keyword related model.
 * exactMatch - `optional` `boolean`, default true, specify whether matching exactly with modelName.
 * projectName - `optional` `string`, specify the returned project.

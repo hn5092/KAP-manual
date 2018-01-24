@@ -29,8 +29,8 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 
 #### 请求主体
-* offset - `可选` `int` 默认0，返回数据起始下标
-* limit - `可选` `int ` 默认10，分页返回对应每页返回多少
+* pageOffset - `可选` `int` 默认0，返回数据起始下标
+* pageSize - `可选` `int ` 默认10，分页返回对应每页返回多少
 * cubeName - `可选` `string` 返回名称等于该关键字的Cube
 * exactMatch - `可选` `boolean` 默认true, 是否根据cubeName完全匹配 
 * modelName - `可选` `string` 返回对应模型名称等于该关键字的Cube
@@ -383,7 +383,8 @@
                             "TEST_KYLIN_FACT.ORDER_ID"
                         ]
                     }
-                },
+                }
+            ],
             "dimensions": [
                 {
                     "table": "TEST_KYLIN_FACT",

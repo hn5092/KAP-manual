@@ -27,8 +27,8 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 
 #### Request Body
-* offset - `optional` `int`, default 0, get data start subscript.
-* limit - `optional` `int `, default 10, how many lines would be included in each returned page.
+* pageOffset - `optional` `int`, default 0, get data start subscript.
+* pageSize - `optional` `int `, default 10, how many lines would be included in each returned page.
 * cubeName - `optional` `string`, returned name is the keyword related Cube.
 * exactMatch - `optional` `boolean`, default true, specify whether matching exactly based on cubeName.
 * modelName - `optional` `string` returned model name is the keyword's Cube.
@@ -383,7 +383,8 @@ fact tables, dimension tables and etc.
                             "TEST_KYLIN_FACT.ORDER_ID"
                         ]
                     }
-                },
+                }
+            ],
             "dimensions": [
                 {
                     "table": "TEST_KYLIN_FACT",

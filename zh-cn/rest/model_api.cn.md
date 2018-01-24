@@ -18,8 +18,8 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 
 #### 请求主体
-* offset - `可选` `int` 默认0 返回数据起始下标
-* limit - `可选` `int ` 默认10 分页返回对应每页返回多少
+* pageOffset - `可选` `int` 默认0 返回数据起始下标
+* pageSize`可选` `int ` 默认10 分页返回对应每页返回多少
 * modelName - `可选` `string` 返回名称等于该关键字的Model
 * exactMatch - `可选` `boolean` 默认true 是否对modelName完全匹配
 * projectName - `可选` `string` 指定返回该项目下

@@ -34,11 +34,15 @@ second: 表示是用户还是用户组
   "data": [
     {
       "first": "ADMIN",
-      "second": "u"
+      "second": "u",
+      "value": "u",
+      "key": "ADMIN"
     },
     {
       "first": "ROLE_ADMIN",
-      "second": "g"
+      "second": "g",
+      "value": "g",
+      "key": "ROLE_ADMIN"
     }
   ],
   "msg": "get table acl"

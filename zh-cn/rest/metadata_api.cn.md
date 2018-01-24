@@ -17,7 +17,7 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 #### 请求参数
 * project - `必选` `string` 项目名.
-* ext - `可选` `string` 是否返回表的扩展信息.
+* ext - `可选` `boolean` 是否返回表的扩展信息.
 
 #### 响应示例
 ```json

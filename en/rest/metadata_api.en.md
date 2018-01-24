@@ -18,7 +18,7 @@
 
 #### Request Parameter
 * project - `required` `string`, project name.
-* ext - `optional` `string`, specify if table's extension information is returned.
+* ext - `optional` `boolean`, specify if table's extension information is returned.
 
 #### Response Example
 ```sh

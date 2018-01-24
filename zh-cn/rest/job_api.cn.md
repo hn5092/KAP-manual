@@ -160,12 +160,14 @@
 
 #### 路径变量
 * jobId - `必选` `string` Job id.
-* stepId - `必选` `string` 步骤 id;  步骤id由Job id和步骤序列id组成; 例如, jobId 是 "fb479e54-837f-49a2-b457-651fc50be110", 第三步 步骤 id 是 "fb479e54-837f-49a2-b457-651fc50be110-3", 
+* stepId - `必选` `string` 步骤 id;  步骤id由Job id和步骤序列id组成; 例如, jobId 是 "fb479e54-837f-49a2-b457-651fc50be110", 第三步 步骤 id 是 "fb479e54-837f-49a2-b457-651fc50be110-03", 
 
 #### 响应示例
 ```json
 {  
-   "cmd_output":"log string"
+   "jobId":"fb479e54-837f-49a2-b457-651fc50be110",
+   "cmd_output":"log string",
+   "stepId": "fb479e54-837f-49a2-b457-651fc50be110-03"
 }
 ```
 
@@ -175,12 +177,14 @@
 
 #### 路径变量
 
-- cubeName - `必选` `string`，Cube 的名称。
-- projectName - `必选` `string` ，项目名称。
-- status - `必选` `int` ，Job 状态，如 (NEW: 0, PENDING: 1, RUNNING: 2, STOPPED: 32, FINISHED: 4, ERROR: 8, DISCARDED: 16)
-- offset - `必选` `int` ，分页所用偏移。
-- limit - `必选` `int`，每页返回的 Job。
+- jobName - `可选` `string`，任务名称。
+- projectName - `可选` `string` ，项目名称。
+- status - `可选` `int` ，Job 状态，如 (NEW: 0, PENDING: 1, RUNNING: 2, STOPPED: 32, FINISHED: 4, ERROR: 8, DISCARDED: 16)
+- pageOffset - `可选` `int` ，分页所用偏移。
+- pageSize - `可选` `int`，每页返回的 Job。
 - timeFilter - `必选` `int`，如 (LAST ONE DAY: 0, LAST ONE WEEK: 1, LAST ONE MONTH: 2, LAST ONE YEAR: 3, ALL: 4)。
+- sortby -  `可选`  `string`，默认"last_modify"，排序字段。
+- reverse - `可选` `boolean`，默认true，是否倒序。
 
 #### 响应示例
 

@@ -33,11 +33,15 @@ second: indicate it is user or user group
   "data": [
     {
       "first": "ADMIN",
-      "second": "u"
+      "second": "u",
+      "value": "u",
+      "key": "ADMIN"
     },
     {
       "first": "ROLE_ADMIN",
-      "second": "g"
+      "second": "g",
+      "value": "g",
+      "key": "ROLE_ADMIN"
     }
   ],
   "msg": "get table acl"

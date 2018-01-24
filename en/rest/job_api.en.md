@@ -160,12 +160,14 @@
 
 #### Path Variable
 * jobId - `required` `string` job id.
-* stepId - `required` `string` step id;  step id is consist of Job id and step sequence id. For example, job id is "fb479e54-837f-49a2-b457-651fc50be110", then step id of the third step is "fb479e54-837f-49a2-b457-651fc50be110-3".
+* stepId - `required` `string` step id;  step id is consist of Job id and step sequence id. For example, job id is "fb479e54-837f-49a2-b457-651fc50be110", then step id of the third step is "fb479e54-837f-49a2-b457-651fc50be110-03".
 
 #### Response Example
 ```
 {  
+   "jobId":"fb479e54-837f-49a2-b457-651fc50be110"
    "cmd_output":"log string"
+   "stepId":"fb479e54-837f-49a2-b457-651fc50be110-03"
 }
 ```
 ### Get Job List
@@ -174,12 +176,14 @@
 
 #### Path Variable
 
-- cubeName - `required` `string` Cube name.
-- projectName - `required` `string` Project name.
-- status - `required` `int` Job status, e.g. (NEW: 0, PENDING: 1, RUNNING: 2, STOPPED: 32, FINISHED: 4, ERROR: 8, DISCARDED: 16)
-- offset - `required` `int` Offset used by pagination.
-- limit - `required` `int` Jobs per page.
-- timeFilter - `required` `int`, e.g. (LAST ONE DAY: 0, LAST ONE WEEK: 1, LAST ONE MONTH: 2, LAST ONE YEAR: 3, ALL: 4)
+- jobName - `optional` `string` Cube name.
+- projectName - `optional` `string` Project name.
+- status - `optional` `int` Job status, e.g. (NEW: 0, PENDING: 1, RUNNING: 2, STOPPED: 32, FINISHED: 4, ERROR: 8, DISCARDED: 16)
+- pageOffset - `optional` `int` Offset used by pagination.
+- pageSize - `optional `int` Jobs per page.
+- timeFilter - `required` `int`, e.g. (LAST ONE DAY: 0, LAST ONE WEEK: 1, LAST ONE MONTH: 2, LAST ONE YEAR: 3, ALL: 4).
+- sortby - `optional` `string` default:"last_modyfy", sort field.
+- reverse - `optional` `boolean` default:true.
 
 #### Response Sample
 
