@@ -8,7 +8,7 @@ KAP在Cube构建过程中，默认应用Hive来做部分预计算。SparkSQL在H
 
 
 
-在构建Cube中，使用SparkSQL需要一个运行中的Spark Thrift server。请注意，尽管这个Spark Thrift server可以同样被用于下压查询，但我们**建议**使用不同的Thrift server做查询下压和Cube构建。因为使用同一个Thrift server查询和构建时，可能导致查询和构建性能都无法令人满意。例如，一个大的构建任务可能会占用所有的executor资源，进而导致下压查询的时间被阻塞（pending）很长一段时间。
+在构建Cube中，使用SparkSQL需要一个运行中的Spark Thrift server。（如果您不确定是否有可用的Spark Thrift server，请咨询您的Hadoop管理员。）
 
 请按照下列步骤，在Cube的构建中启用SparkSQL：
 

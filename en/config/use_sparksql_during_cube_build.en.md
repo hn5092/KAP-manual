@@ -4,8 +4,9 @@ KAP leverages Hive by default to do part of the pre-calculations during cube bui
 
 ![sparksql_build_step](images/use_sparksql_during_cube_build/sparksql_flat_table.png)
 
+A running Spark Thrift server is required to enable SparkSQL during cube build. (Please consult your Hadoop administrator if you are not sure if there is a Spark Thrift server available.) 
 
-A running Spark Thrift server is required to enable SparkSQL during cube build. (Please consult your Hadoop administrator if you are not sure if there is a Spark Thrift server available.) Follow the steps below to enable SparkSQL during cube build.
+Follow the steps below to enable SparkSQL during cube build:
 
 1. As a prerequisite, prepare a Spark Thrift server that will be used during cube build.
 
