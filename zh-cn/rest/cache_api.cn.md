@@ -13,9 +13,9 @@
 `Content-Type: application/vnd.apache.kylin-v2+json`
 
 #### 路径变量
-* entity - `必选` `string` 'all','project_schema','project_data' 或者 'project_acl'
+* entity - `必选` `string` 'all', 'project_schema', 'project_data' 或者 'project_acl'.
 * cacheKey - `必选` `string` 缓存键值, 比如 Project名称.
-* event - `必选` `string` 'create', 'update' or 'drop'
+* event - `必选` `string` 'create', 'update' or 'drop'.
 
 ### 清理单节点缓存
 `请求方式 PUT`
