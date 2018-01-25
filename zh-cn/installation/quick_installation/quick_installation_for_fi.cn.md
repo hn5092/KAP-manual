@@ -110,6 +110,11 @@ kylin.storage.hbase.compression-codec=none
 # kap.storage.columnar.page-compression=SNAPPY //注释掉该项
 ```
 
+如果运行环境有启用kerberos安全认证,并且集群的hive配置hive.server2.enable.doAs为true，则需要添加相关的配置项：
+
+```properties
+kylin.source.hive.table-dir-create-first=true
+```
 ### 启动 KAP
 
 运行下述命令以启动 KAP：
